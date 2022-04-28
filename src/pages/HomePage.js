@@ -12,9 +12,13 @@ import {
   IonButton,
   IonSegment,
   IonSegmentButton,
-  IonLabel
+  IonLabel,
 } from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Keyboard, Pagination } from "swiper";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import HowtoBuySell from "../components/HowtoBuySell"
 import ListCar from "../components/ListCar";
 import SearchListCar from "../components/SearchListCar";
 import style from "./HomePage.module.css";
@@ -42,6 +46,16 @@ import proton1 from "../img/car-brow/car3/car1.png";
 import proton2 from "../img/car-brow/car3/car2.png";
 import proton3 from "../img/car-brow/car3/car3.png";
 
+import buy1 from "../img/buy1.svg"
+import buy2 from "../img/buy2.svg"
+import buy3 from "../img/buy3.svg"
+import buy4 from "../img/buy4.svg"
+
+import sell1 from "../img/sell1.jpg"
+import sell2 from "../img/sell2.jpg"
+import sell3 from "../img/sell3.jpg"
+import sell4 from "../img/sell4.jpg"
+
 const slideOpts = {
   autoplay: {
     disableOnInteraction: false,
@@ -53,6 +67,68 @@ const slideOpts = {
   //   dynamicBullets:true
   // }
 };
+
+const listBuy = [
+  {
+    id:1,
+    imgsrc:buy1,
+    title:"Find Your Car",
+    text:"Browse our carefully curated and professionally inspected cars online.",
+    link:"/buy-car"
+  },
+  {
+    id:2,
+    imgsrc:buy2,
+    title:"Test Drive",
+    text:"All our cars are sanitized before and after the test drive, making your experience safe and sound.",
+    link:""
+  },
+  {
+    id:3,
+    imgsrc:buy3,
+    title:"Doorstep Delivery",
+    text:"Choose to collect your car from our centers or enjoy a doorstep delivery.",
+    link:""
+  },
+  {
+    id:4,
+    imgsrc:buy4,
+    title:"Worry-free Purchase",
+    text:"Enjoy a 5-day money back guarantee when you buy Carsome Certified car.",
+    link:""
+  },
+]
+
+const listSell = [
+  {
+    id:1,
+    imgsrc:sell1,
+    title:"Book an Appointment",
+    text:"It only takes 2 minutes to book an inspection slot.",
+    link:""
+  },
+  {
+    id:2,
+    imgsrc:sell2,
+    title:"Free Car Inspection",
+    text:"Our professionals will inspect your car in just 30 minutes!",
+    link:""
+  },
+  {
+    id:3,
+    imgsrc:sell3,
+    title:"Sell Your Car",
+    text:"Accept our offer on the spot, or opt for bidding with Carsome's network of dealers!",
+    link:""
+  },
+  {
+    id:4,
+    imgsrc:sell4,
+    title:"Get Paid in 1 Hour",
+    text:"Plus, leave all the paperwork to us for a hassle-free experience.",
+    link:""
+  },
+]
 
 const HomePage = () => {
   const [searchCar, setSearchCar] = useState("");
@@ -210,6 +286,16 @@ const HomePage = () => {
     setSearchCar(e.detail.value);
   };
 
+  const [interactive, setInteractive] = useState('how_buy');
+  const [initPage,setInitPage] = useState(0);
+
+  const onChangeBuySell = (e) => {
+    setInteractive(e.detail.value);
+    setInitPage(0);
+  }
+
+
+
   return (
     <IonPage>
       <IonContent fullscreen>
@@ -346,9 +432,9 @@ const HomePage = () => {
           <div className={style.how_it_work_title}>
             <h3>How It Works</h3>
           </div>
-          <div style={{display:'flex',justifyContent:'center'}}>
-            <IonSegment className={style.how_buy_sell} value="how_buy"
-              onIonChange={(e) => console.log("Segment selected", e.detail.value)}
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <IonSegment className={style.how_buy_sell} value={interactive}
+              onIonChange={(e) => onChangeBuySell(e)}
             >
               <IonSegmentButton value="how_buy">
                 <IonLabel>How to Buy</IonLabel>
@@ -358,7 +444,25 @@ const HomePage = () => {
               </IonSegmentButton>
             </IonSegment>
           </div>
-          
+          <div style={{marginTop:'32px'}}>
+            {interactive === 'how_buy' ?
+              <Swiper>
+                {listBuy.map((item,index) => (
+                  <SwiperSlide key ={index} className={style.how_buy_sell_swiper}>
+                    <HowtoBuySell listItem={item} isBuy={true}></HowtoBuySell>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              :
+              <Swiper>
+                {listSell.map((item,index) => (
+                  <SwiperSlide key ={index} className={style.how_buy_sell_swiper}>
+                    <HowtoBuySell listItem={item} isBuy={false}></HowtoBuySell>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            }
+          </div>
         </div>
       </IonContent>
     </IonPage>

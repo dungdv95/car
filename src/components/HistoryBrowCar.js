@@ -23,7 +23,7 @@ import logo from "../img/carsomelog.svg";
 
 function HistoryBrowCar(props) {
   const listCar = props.historyListCar;
-  console.log(listCar.imgcar);
+  // console.log(listCar.imgcar);
   return (
     <IonCard style={{ margin: "unset" }}>
       <Swiper

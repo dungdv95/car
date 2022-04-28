@@ -12,7 +12,7 @@ import style from "./ListCar.module.css"
 
 function ListCar(props) {
   const carList = props.carDetail;
-  console.log(carList)
+  // console.log(carList)
   return (
     <IonCol>
       <IonCard className={style.car}>

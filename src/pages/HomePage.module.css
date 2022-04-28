@@ -557,3 +557,9 @@
  .segment_sell {
     --background-checked:#fdcf33;
  } */
+
+ .how_buy_sell_swiper {
+    justify-content: left;
+    width: 248px!important;
+    margin-left: 16px;
+ }
