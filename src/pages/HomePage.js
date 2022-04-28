@@ -10,8 +10,15 @@ import {
   IonRow,
   IonCol,
   IonButton,
+  IonSegment,
+  IonSegmentButton,
+  IonLabel,
 } from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Keyboard, Pagination } from "swiper";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import HowtoBuySell from "../components/HowtoBuySell"
 import ListCar from "../components/ListCar";
 import SearchListCar from "../components/SearchListCar";
 import style from "./HomePage.module.css";
@@ -24,19 +31,104 @@ import car2 from "../img/car2.png";
 import car3 from "../img/car3.png";
 import car4 from "../img/car4.png";
 import HistoryBrowCar from "../components/HistoryBrowCar";
-import browcar1 from "../img/car-brow/car1/car1.png"
-import browcar2 from "../img/car-brow/car1/car2.png"
+import honda1 from "../img/car-brow/car1/car1.png";
+import honda2 from "../img/car-brow/car1/car2.png";
+import honda3 from "../img/car-brow/car1/car3.png";
+import honda4 from "../img/car-brow/car1/car4.png";
+import honda5 from "../img/car-brow/car1/car5.png";
+import honda6 from "../img/car-brow/car1/car6.png";
+
+import mecz1 from "../img/car-brow/car2/car1.png";
+import mecz2 from "../img/car-brow/car2/car2.png";
+import mecz3 from "../img/car-brow/car2/car3.png";
+
+import proton1 from "../img/car-brow/car3/car1.png";
+import proton2 from "../img/car-brow/car3/car2.png";
+import proton3 from "../img/car-brow/car3/car3.png";
+
+import buy1 from "../img/buy1.svg"
+import buy2 from "../img/buy2.svg"
+import buy3 from "../img/buy3.svg"
+import buy4 from "../img/buy4.svg"
+
+import sell1 from "../img/sell1.jpg"
+import sell2 from "../img/sell2.jpg"
+import sell3 from "../img/sell3.jpg"
+import sell4 from "../img/sell4.jpg"
 
 const slideOpts = {
   autoplay: {
     disableOnInteraction: false,
     delay: 5000,
   },
+  loop: true,
   // pagination: {
   //   // type:'progressbar',
   //   dynamicBullets:true
   // }
 };
+
+const listBuy = [
+  {
+    id:1,
+    imgsrc:buy1,
+    title:"Find Your Car",
+    text:"Browse our carefully curated and professionally inspected cars online.",
+    link:"/buy-car"
+  },
+  {
+    id:2,
+    imgsrc:buy2,
+    title:"Test Drive",
+    text:"All our cars are sanitized before and after the test drive, making your experience safe and sound.",
+    link:""
+  },
+  {
+    id:3,
+    imgsrc:buy3,
+    title:"Doorstep Delivery",
+    text:"Choose to collect your car from our centers or enjoy a doorstep delivery.",
+    link:""
+  },
+  {
+    id:4,
+    imgsrc:buy4,
+    title:"Worry-free Purchase",
+    text:"Enjoy a 5-day money back guarantee when you buy Carsome Certified car.",
+    link:""
+  },
+]
+
+const listSell = [
+  {
+    id:1,
+    imgsrc:sell1,
+    title:"Book an Appointment",
+    text:"It only takes 2 minutes to book an inspection slot.",
+    link:""
+  },
+  {
+    id:2,
+    imgsrc:sell2,
+    title:"Free Car Inspection",
+    text:"Our professionals will inspect your car in just 30 minutes!",
+    link:""
+  },
+  {
+    id:3,
+    imgsrc:sell3,
+    title:"Sell Your Car",
+    text:"Accept our offer on the spot, or opt for bidding with Carsome's network of dealers!",
+    link:""
+  },
+  {
+    id:4,
+    imgsrc:sell4,
+    title:"Get Paid in 1 Hour",
+    text:"Plus, leave all the paperwork to us for a hassle-free experience.",
+    link:""
+  },
+]
 
 const HomePage = () => {
   const [searchCar, setSearchCar] = useState("");
@@ -69,7 +161,6 @@ const HomePage = () => {
     "RM 30,000 - 50,000",
     "RM 50,000 - 80,000",
     "RM 80,000 - 100,000",
-    "View All Cars",
   ]);
 
   const [listEndow, setListEndow] = useState([
@@ -79,56 +170,131 @@ const HomePage = () => {
     "5-Day Money-back Guarantee",
   ]);
 
-  const [historyListCar,setHistoryLítCar] = useState([
+  const [historyListCar, setHistoryListCar] = useState([
     {
-      id:1,
-      imgcar:[
-        browcar1,
-        browcar2
-      ],
-      namecar:'2016 Honda',
-      vercar:'HR-V E 1.8',
-      favorites:true,
-      detail:{
-        distance:'100 km',
-        type:'Automatic',
-        address:'Ha Noi'
+      id: 1,
+      imgcar: [honda1, honda2, honda3, honda4, honda5, honda6],
+      vercar: "2016 Honda",
+      namecar: "HR-V E 1.8",
+      favorites: true,
+      detail: {
+        distance: "103,073 km",
+        type: "Automatic",
+        address: "Ha Noi",
       },
-      tagcar:[
-        'ABS Brake',
-        'Keyless Push Start',
-        'SRS Airbag'
-      ],
-      priceTotal:'72,200',
-      priceMonth:'791/mo'
+      tagcar: ["ABS Brake", "Keyless Push Start", "SRS Airbag"],
+      priceTotal: "72,200",
+      priceMonth: "791/mo",
     },
     {
-      id:2,
-      imgcar:[
-        browcar1,
-        browcar2
-      ],
-      namecar:'2019 Proton',
-      vercar:'X70 TGDI EXECUTIVE 1.8',
-      favorites:false,
-      detail:{
-        distance:'200 km',
-        type:'Automatic',
-        address:'Bang Kok'
+      id: 2,
+      imgcar: [proton1, proton2, proton3],
+      vercar: "2019 Proton",
+      namecar: "X70 TGDI EXECUTIVE 1.8",
+      favorites: false,
+      detail: {
+        distance: "36,432 km",
+        type: "Automatic",
+        address: "Bang Kok",
       },
-      tagcar:[
-        'Electric Powered Seats',
-        'Keyless Push Start',
-        'Touchscreen Audio Display'
+      tagcar: [
+        "Electric Powered Seats",
+        "Keyless Push Start",
+        "Touchscreen Audio Display",
       ],
-      priceTotal:'90,100',
-      priceMonth:'987/mo'
+      priceTotal: "90,100",
+      priceMonth: "987/mo",
+    },
+    {
+      id: 3,
+      imgcar: [mecz1, mecz2, mecz3],
+      vercar: "2019 Mercedes-Benz",
+      namecar: "GLC 250 4MATIC (CKD) 2.0",
+      favorites: false,
+      detail: {
+        distance: "30,896 km",
+        type: "Automatic",
+        address: "Kuala Lumpur",
+      },
+      tagcar: [
+        "Leather Seat",
+        "Touchscreen Audio Display",
+        "Keyless Push Start",
+      ],
+      priceTotal: "260,700",
+      priceMonth: "2857/mo",
+    },
+  ]);
+
+  const [listCarView, setListCarView] = useState([
+    {
+      id: 1,
+      imgcar: [honda1, honda2, honda3, honda4, honda5, honda6],
+      vercar: "2016 Honda",
+      namecar: "HR-V E 1.8",
+      favorites: true,
+      detail: {
+        distance: "103,073 km",
+        type: "Automatic",
+        address: "Ha Noi",
+      },
+      tagcar: ["ABS Brake", "Keyless Push Start", "SRS Airbag"],
+      priceTotal: "72,200",
+      priceMonth: "791/mo",
+    },
+    {
+      id: 2,
+      imgcar: [proton1, proton2, proton3],
+      vercar: "2019 Proton",
+      namecar: "X70 TGDI EXECUTIVE 1.8",
+      favorites: false,
+      detail: {
+        distance: "36,432 km",
+        type: "Automatic",
+        address: "Bang Kok",
+      },
+      tagcar: [
+        "Electric Powered Seats",
+        "Keyless Push Start",
+        "Touchscreen Audio Display",
+      ],
+      priceTotal: "90,100",
+      priceMonth: "987/mo",
+    },
+    {
+      id: 3,
+      imgcar: [mecz1, mecz2, mecz3],
+      vercar: "2019 Mercedes-Benz",
+      namecar: "GLC 250 4MATIC (CKD) 2.0",
+      favorites: false,
+      detail: {
+        distance: "30,896 km",
+        type: "Automatic",
+        address: "Kuala Lumpur",
+      },
+      tagcar: [
+        "Leather Seat",
+        "Touchscreen Audio Display",
+        "Keyless Push Start",
+      ],
+      priceTotal: "260,700",
+      priceMonth: "2857/mo",
     },
   ]);
 
   const onChangeSearch = (e) => {
     setSearchCar(e.detail.value);
   };
+
+  const [interactive, setInteractive] = useState('how_buy');
+  const [initPage,setInitPage] = useState(0);
+
+  const onChangeBuySell = (e) => {
+    setInteractive(e.detail.value);
+    setInitPage(0);
+  }
+
+
 
   return (
     <IonPage>
@@ -150,7 +316,7 @@ const HomePage = () => {
           </IonSlides>
         </>
         <>
-          <IonGrid>
+          <IonGrid className={style.search_bar}>
             <IonRow>
               <IonCol size="12">
                 <IonSearchbar
@@ -176,20 +342,19 @@ const HomePage = () => {
         <>
           <IonSlides options={{ slidesPerView: 2 }}>
             {searchListText.map((item, index) => (
-              <IonSlide className={style.ion_slide_buttom}>
-                {item !== "View All Cars" ? (
-                  <IonButton className={style.w_buttom} color="light" key={index}>
-                    <span className={style.font_size_buttom}>{item}</span>
-                  </IonButton>
-                ) : (
-                  <IonButton className={style.w_buttom} color="light" key={index}>
-                    <span className={`${style.font_size_buttom} ${style.bt_color}`}>
-                      {item}
-                    </span>
-                  </IonButton>
-                )}
+              <IonSlide className={style.ion_slide_buttom} key={index}>
+                <IonButton className={style.w_buttom} color="light">
+                  <span className={style.font_size_buttom}>{item}</span>
+                </IonButton>
               </IonSlide>
             ))}
+            <IonSlide className={style.ion_slide_buttom}>
+              <IonButton className={style.w_buttom} color="light">
+                <span className={`${style.font_size_buttom} ${style.bt_color}`}>
+                  View All Cars
+                </span>
+              </IonButton>
+            </IonSlide>
           </IonSlides>
         </>
         <>
@@ -198,22 +363,31 @@ const HomePage = () => {
               <h3>Browsing History</h3>
             </div>
           </div>
-          <IonSlides>
-              <IonSlide>
-                {historyListCar.map((item) => (
-                  <HistoryBrowCar key={item.id} historyListCar={item}></HistoryBrowCar>
-                ))}
+          <IonSlides
+            options={{ slidesPerView: 1 }}
+            style={{ paddingBottom: "20px" }}
+          >
+            {historyListCar.map((item) => (
+              <IonSlide className={style.wHistory} key={item.id}>
+                <HistoryBrowCar historyListCar={item}></HistoryBrowCar>
               </IonSlide>
-            </IonSlides>
+            ))}
+            <IonSlide>
+              <div className={style.view_more}>
+                <div className={style.view_more_detail}>
+                  <i></i>
+                  View More Cars
+                </div>
+              </div>
+            </IonSlide>
+          </IonSlides>
         </>
         <div className={style.car_popular_home}>
           <div
             style={{
               display: "flex",
-              marginTop: "2rem",
               alignItems: "center",
               justifyContent: "center",
-              
             }}
           >
             <div className={style.title}>
@@ -227,10 +401,67 @@ const HomePage = () => {
               ))}
             </div>
           </div>
+          <IonSlides
+            options={{ slidesPerView: 1 }}
+            style={{ paddingBottom: "20px" }}
+          >
+            {historyListCar.map((item) => (
+              <IonSlide className={style.wHistory} key={item.id}>
+                <HistoryBrowCar historyListCar={item}></HistoryBrowCar>
+              </IonSlide>
+            ))}
+            <IonSlide>
+              <div className={style.view_more_popular}>
+                <div className={style.view_more_popular_detail}>
+                  <i></i>
+                  View More Popular Cars
+                </div>
+              </div>
+            </IonSlide>
+          </IonSlides>
+
           <div className={style.car_popular_home_text}>
-            <span >
-              We deliver the highest quality pre-owned cars that are refurbished to be as good as new through our comprehensive Carsome Certified Refurbishment Process.
+            <span>
+              We deliver the highest quality pre-owned cars that are refurbished
+              to be as good as new through our comprehensive Carsome Certified
+              Refurbishment Process.
             </span>
+          </div>
+        </div>
+        <div className={style.how_it_work}>
+          <div className={style.how_it_work_title}>
+            <h3>How It Works</h3>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <IonSegment className={style.how_buy_sell} value={interactive}
+              onIonChange={(e) => onChangeBuySell(e)}
+            >
+              <IonSegmentButton value="how_buy">
+                <IonLabel>How to Buy</IonLabel>
+              </IonSegmentButton>
+              <IonSegmentButton value="how_sell">
+                <IonLabel>How to Sell</IonLabel>
+              </IonSegmentButton>
+            </IonSegment>
+          </div>
+          <div style={{marginTop:'32px'}}>
+            {interactive === 'how_buy' ?
+              <Swiper>
+                {listBuy.map((item,index) => (
+                  <SwiperSlide key ={index} className={style.how_buy_sell_swiper}>
+                    <HowtoBuySell listItem={item} isBuy={true}></HowtoBuySell>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              :
+              <Swiper>
+                {listSell.map((item,index) => (
+                  <SwiperSlide key ={index} className={style.how_buy_sell_swiper}>
+                    <HowtoBuySell listItem={item} isBuy={false}></HowtoBuySell>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            }
           </div>
         </div>
       </IonContent>
