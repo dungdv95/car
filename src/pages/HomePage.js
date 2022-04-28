@@ -10,6 +10,9 @@ import {
   IonRow,
   IonCol,
   IonButton,
+  IonSegment,
+  IonSegmentButton,
+  IonLabel
 } from "@ionic/react";
 import ExploreContainer from "../components/ExploreContainer";
 import ListCar from "../components/ListCar";
@@ -24,14 +27,27 @@ import car2 from "../img/car2.png";
 import car3 from "../img/car3.png";
 import car4 from "../img/car4.png";
 import HistoryBrowCar from "../components/HistoryBrowCar";
-import browcar1 from "../img/car-brow/car1/car1.png"
-import browcar2 from "../img/car-brow/car1/car2.png"
+import honda1 from "../img/car-brow/car1/car1.png";
+import honda2 from "../img/car-brow/car1/car2.png";
+import honda3 from "../img/car-brow/car1/car3.png";
+import honda4 from "../img/car-brow/car1/car4.png";
+import honda5 from "../img/car-brow/car1/car5.png";
+import honda6 from "../img/car-brow/car1/car6.png";
+
+import mecz1 from "../img/car-brow/car2/car1.png";
+import mecz2 from "../img/car-brow/car2/car2.png";
+import mecz3 from "../img/car-brow/car2/car3.png";
+
+import proton1 from "../img/car-brow/car3/car1.png";
+import proton2 from "../img/car-brow/car3/car2.png";
+import proton3 from "../img/car-brow/car3/car3.png";
 
 const slideOpts = {
   autoplay: {
     disableOnInteraction: false,
     delay: 5000,
   },
+  loop: true,
   // pagination: {
   //   // type:'progressbar',
   //   dynamicBullets:true
@@ -69,7 +85,6 @@ const HomePage = () => {
     "RM 30,000 - 50,000",
     "RM 50,000 - 80,000",
     "RM 80,000 - 100,000",
-    "View All Cars",
   ]);
 
   const [listEndow, setListEndow] = useState([
@@ -79,50 +94,115 @@ const HomePage = () => {
     "5-Day Money-back Guarantee",
   ]);
 
-  const [historyListCar,setHistoryLítCar] = useState([
+  const [historyListCar, setHistoryListCar] = useState([
     {
-      id:1,
-      imgcar:[
-        browcar1,
-        browcar2
-      ],
-      namecar:'2016 Honda',
-      vercar:'HR-V E 1.8',
-      favorites:true,
-      detail:{
-        distance:'100 km',
-        type:'Automatic',
-        address:'Ha Noi'
+      id: 1,
+      imgcar: [honda1, honda2, honda3, honda4, honda5, honda6],
+      vercar: "2016 Honda",
+      namecar: "HR-V E 1.8",
+      favorites: true,
+      detail: {
+        distance: "103,073 km",
+        type: "Automatic",
+        address: "Ha Noi",
       },
-      tagcar:[
-        'ABS Brake',
-        'Keyless Push Start',
-        'SRS Airbag'
-      ],
-      priceTotal:'72,200',
-      priceMonth:'791/mo'
+      tagcar: ["ABS Brake", "Keyless Push Start", "SRS Airbag"],
+      priceTotal: "72,200",
+      priceMonth: "791/mo",
     },
     {
-      id:2,
-      imgcar:[
-        browcar1,
-        browcar2
-      ],
-      namecar:'2019 Proton',
-      vercar:'X70 TGDI EXECUTIVE 1.8',
-      favorites:false,
-      detail:{
-        distance:'200 km',
-        type:'Automatic',
-        address:'Bang Kok'
+      id: 2,
+      imgcar: [proton1, proton2, proton3],
+      vercar: "2019 Proton",
+      namecar: "X70 TGDI EXECUTIVE 1.8",
+      favorites: false,
+      detail: {
+        distance: "36,432 km",
+        type: "Automatic",
+        address: "Bang Kok",
       },
-      tagcar:[
-        'Electric Powered Seats',
-        'Keyless Push Start',
-        'Touchscreen Audio Display'
+      tagcar: [
+        "Electric Powered Seats",
+        "Keyless Push Start",
+        "Touchscreen Audio Display",
       ],
-      priceTotal:'90,100',
-      priceMonth:'987/mo'
+      priceTotal: "90,100",
+      priceMonth: "987/mo",
+    },
+    {
+      id: 3,
+      imgcar: [mecz1, mecz2, mecz3],
+      vercar: "2019 Mercedes-Benz",
+      namecar: "GLC 250 4MATIC (CKD) 2.0",
+      favorites: false,
+      detail: {
+        distance: "30,896 km",
+        type: "Automatic",
+        address: "Kuala Lumpur",
+      },
+      tagcar: [
+        "Leather Seat",
+        "Touchscreen Audio Display",
+        "Keyless Push Start",
+      ],
+      priceTotal: "260,700",
+      priceMonth: "2857/mo",
+    },
+  ]);
+
+  const [listCarView, setListCarView] = useState([
+    {
+      id: 1,
+      imgcar: [honda1, honda2, honda3, honda4, honda5, honda6],
+      vercar: "2016 Honda",
+      namecar: "HR-V E 1.8",
+      favorites: true,
+      detail: {
+        distance: "103,073 km",
+        type: "Automatic",
+        address: "Ha Noi",
+      },
+      tagcar: ["ABS Brake", "Keyless Push Start", "SRS Airbag"],
+      priceTotal: "72,200",
+      priceMonth: "791/mo",
+    },
+    {
+      id: 2,
+      imgcar: [proton1, proton2, proton3],
+      vercar: "2019 Proton",
+      namecar: "X70 TGDI EXECUTIVE 1.8",
+      favorites: false,
+      detail: {
+        distance: "36,432 km",
+        type: "Automatic",
+        address: "Bang Kok",
+      },
+      tagcar: [
+        "Electric Powered Seats",
+        "Keyless Push Start",
+        "Touchscreen Audio Display",
+      ],
+      priceTotal: "90,100",
+      priceMonth: "987/mo",
+    },
+    {
+      id: 3,
+      imgcar: [mecz1, mecz2, mecz3],
+      vercar: "2019 Mercedes-Benz",
+      namecar: "GLC 250 4MATIC (CKD) 2.0",
+      favorites: false,
+      detail: {
+        distance: "30,896 km",
+        type: "Automatic",
+        address: "Kuala Lumpur",
+      },
+      tagcar: [
+        "Leather Seat",
+        "Touchscreen Audio Display",
+        "Keyless Push Start",
+      ],
+      priceTotal: "260,700",
+      priceMonth: "2857/mo",
     },
   ]);
 
@@ -150,7 +230,7 @@ const HomePage = () => {
           </IonSlides>
         </>
         <>
-          <IonGrid>
+          <IonGrid className={style.search_bar}>
             <IonRow>
               <IonCol size="12">
                 <IonSearchbar
@@ -176,20 +256,19 @@ const HomePage = () => {
         <>
           <IonSlides options={{ slidesPerView: 2 }}>
             {searchListText.map((item, index) => (
-              <IonSlide className={style.ion_slide_buttom}>
-                {item !== "View All Cars" ? (
-                  <IonButton className={style.w_buttom} color="light" key={index}>
-                    <span className={style.font_size_buttom}>{item}</span>
-                  </IonButton>
-                ) : (
-                  <IonButton className={style.w_buttom} color="light" key={index}>
-                    <span className={`${style.font_size_buttom} ${style.bt_color}`}>
-                      {item}
-                    </span>
-                  </IonButton>
-                )}
+              <IonSlide className={style.ion_slide_buttom} key={index}>
+                <IonButton className={style.w_buttom} color="light">
+                  <span className={style.font_size_buttom}>{item}</span>
+                </IonButton>
               </IonSlide>
             ))}
+            <IonSlide className={style.ion_slide_buttom}>
+              <IonButton className={style.w_buttom} color="light">
+                <span className={`${style.font_size_buttom} ${style.bt_color}`}>
+                  View All Cars
+                </span>
+              </IonButton>
+            </IonSlide>
           </IonSlides>
         </>
         <>
@@ -198,22 +277,31 @@ const HomePage = () => {
               <h3>Browsing History</h3>
             </div>
           </div>
-          <IonSlides>
-              <IonSlide>
-                {historyListCar.map((item) => (
-                  <HistoryBrowCar key={item.id} historyListCar={item}></HistoryBrowCar>
-                ))}
+          <IonSlides
+            options={{ slidesPerView: 1 }}
+            style={{ paddingBottom: "20px" }}
+          >
+            {historyListCar.map((item) => (
+              <IonSlide className={style.wHistory} key={item.id}>
+                <HistoryBrowCar historyListCar={item}></HistoryBrowCar>
               </IonSlide>
-            </IonSlides>
+            ))}
+            <IonSlide>
+              <div className={style.view_more}>
+                <div className={style.view_more_detail}>
+                  <i></i>
+                  View More Cars
+                </div>
+              </div>
+            </IonSlide>
+          </IonSlides>
         </>
         <div className={style.car_popular_home}>
           <div
             style={{
               display: "flex",
-              marginTop: "2rem",
               alignItems: "center",
               justifyContent: "center",
-              
             }}
           >
             <div className={style.title}>
@@ -227,11 +315,50 @@ const HomePage = () => {
               ))}
             </div>
           </div>
+          <IonSlides
+            options={{ slidesPerView: 1 }}
+            style={{ paddingBottom: "20px" }}
+          >
+            {historyListCar.map((item) => (
+              <IonSlide className={style.wHistory} key={item.id}>
+                <HistoryBrowCar historyListCar={item}></HistoryBrowCar>
+              </IonSlide>
+            ))}
+            <IonSlide>
+              <div className={style.view_more_popular}>
+                <div className={style.view_more_popular_detail}>
+                  <i></i>
+                  View More Popular Cars
+                </div>
+              </div>
+            </IonSlide>
+          </IonSlides>
+
           <div className={style.car_popular_home_text}>
-            <span >
-              We deliver the highest quality pre-owned cars that are refurbished to be as good as new through our comprehensive Carsome Certified Refurbishment Process.
+            <span>
+              We deliver the highest quality pre-owned cars that are refurbished
+              to be as good as new through our comprehensive Carsome Certified
+              Refurbishment Process.
             </span>
           </div>
+        </div>
+        <div className={style.how_it_work}>
+          <div className={style.how_it_work_title}>
+            <h3>How It Works</h3>
+          </div>
+          <div style={{display:'flex',justifyContent:'center'}}>
+            <IonSegment className={style.how_buy_sell} value="how_buy"
+              onIonChange={(e) => console.log("Segment selected", e.detail.value)}
+            >
+              <IonSegmentButton value="how_buy">
+                <IonLabel>How to Buy</IonLabel>
+              </IonSegmentButton>
+              <IonSegmentButton value="how_sell">
+                <IonLabel>How to Sell</IonLabel>
+              </IonSegmentButton>
+            </IonSegment>
+          </div>
+          
         </div>
       </IonContent>
     </IonPage>
