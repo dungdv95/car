@@ -18,9 +18,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Keyboard, Pagination } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import HowtoBuySell from "../components/HowtoBuySell"
+import HowtoBuySell from "../components/HowtoBuySell";
 import ListCar from "../components/ListCar";
 import SearchListCar from "../components/SearchListCar";
+import CommentUser from "../components/CommentUser"
+import Footer from "../components/Footer"
 import style from "./HomePage.module.css";
 import img2 from "../img/2.jpg";
 import img3 from "../img/3.jpg";
@@ -46,15 +48,15 @@ import proton1 from "../img/car-brow/car3/car1.png";
 import proton2 from "../img/car-brow/car3/car2.png";
 import proton3 from "../img/car-brow/car3/car3.png";
 
-import buy1 from "../img/buy1.svg"
-import buy2 from "../img/buy2.svg"
-import buy3 from "../img/buy3.svg"
-import buy4 from "../img/buy4.svg"
+import buy1 from "../img/buy1.svg";
+import buy2 from "../img/buy2.svg";
+import buy3 from "../img/buy3.svg";
+import buy4 from "../img/buy4.svg";
 
-import sell1 from "../img/sell1.jpg"
-import sell2 from "../img/sell2.jpg"
-import sell3 from "../img/sell3.jpg"
-import sell4 from "../img/sell4.jpg"
+import sell1 from "../img/sell1.jpg";
+import sell2 from "../img/sell2.jpg";
+import sell3 from "../img/sell3.jpg";
+import sell4 from "../img/sell4.jpg";
 
 const slideOpts = {
   autoplay: {
@@ -70,65 +72,65 @@ const slideOpts = {
 
 const listBuy = [
   {
-    id:1,
-    imgsrc:buy1,
-    title:"Find Your Car",
-    text:"Browse our carefully curated and professionally inspected cars online.",
-    link:"/buy-car"
+    id: 1,
+    imgsrc: buy1,
+    title: "Find Your Car",
+    text: "Browse our carefully curated and professionally inspected cars online.",
+    link: "/buy-car",
   },
   {
-    id:2,
-    imgsrc:buy2,
-    title:"Test Drive",
-    text:"All our cars are sanitized before and after the test drive, making your experience safe and sound.",
-    link:""
+    id: 2,
+    imgsrc: buy2,
+    title: "Test Drive",
+    text: "All our cars are sanitized before and after the test drive, making your experience safe and sound.",
+    link: "",
   },
   {
-    id:3,
-    imgsrc:buy3,
-    title:"Doorstep Delivery",
-    text:"Choose to collect your car from our centers or enjoy a doorstep delivery.",
-    link:""
+    id: 3,
+    imgsrc: buy3,
+    title: "Doorstep Delivery",
+    text: "Choose to collect your car from our centers or enjoy a doorstep delivery.",
+    link: "",
   },
   {
-    id:4,
-    imgsrc:buy4,
-    title:"Worry-free Purchase",
-    text:"Enjoy a 5-day money back guarantee when you buy Carsome Certified car.",
-    link:""
+    id: 4,
+    imgsrc: buy4,
+    title: "Worry-free Purchase",
+    text: "Enjoy a 5-day money back guarantee when you buy Carsome Certified car.",
+    link: "",
   },
-]
+];
 
 const listSell = [
   {
-    id:1,
-    imgsrc:sell1,
-    title:"Book an Appointment",
-    text:"It only takes 2 minutes to book an inspection slot.",
-    link:""
+    id: 1,
+    imgsrc: sell1,
+    title: "Book an Appointment",
+    text: "It only takes 2 minutes to book an inspection slot.",
+    link: "",
   },
   {
-    id:2,
-    imgsrc:sell2,
-    title:"Free Car Inspection",
-    text:"Our professionals will inspect your car in just 30 minutes!",
-    link:""
+    id: 2,
+    imgsrc: sell2,
+    title: "Free Car Inspection",
+    text: "Our professionals will inspect your car in just 30 minutes!",
+    link: "",
   },
   {
-    id:3,
-    imgsrc:sell3,
-    title:"Sell Your Car",
-    text:"Accept our offer on the spot, or opt for bidding with Carsome's network of dealers!",
-    link:""
+    id: 3,
+    imgsrc: sell3,
+    title: "Sell Your Car",
+    text: "Accept our offer on the spot, or opt for bidding with Carsome's network of dealers!",
+    link: "",
   },
   {
-    id:4,
-    imgsrc:sell4,
-    title:"Get Paid in 1 Hour",
-    text:"Plus, leave all the paperwork to us for a hassle-free experience.",
-    link:""
+    id: 4,
+    imgsrc: sell4,
+    title: "Get Paid in 1 Hour",
+    text: "Plus, leave all the paperwork to us for a hassle-free experience.",
+    link: "",
   },
-]
+];
 
 const HomePage = () => {
   const [searchCar, setSearchCar] = useState("");
@@ -286,15 +288,41 @@ const HomePage = () => {
     setSearchCar(e.detail.value);
   };
 
-  const [interactive, setInteractive] = useState('how_buy');
-  const [initPage,setInitPage] = useState(0);
+  const [interactive, setInteractive] = useState("how_buy");
+  const [initPage, setInitPage] = useState(0);
+
+  const [listComment, setListComment] = useState([
+    {
+      id: 1,
+      usename: "Atie Baharun",
+      comment:"Berbaloi...jual dan beli kereta di Carsome..service yang yang sangat bagus di samping staff yang awesome..jual kereta lama dengan harga yang tinggi..perbezaan harga yang ketara dengan syarikat kereta terpakai lain..kemudian dapat beli model kereta 2020 dengan diskaun lagi rm500 dan free gift lain hanya di Carsome..sangat berbaloi..saya syorkan Carsome pada anda semua👍👍👍",
+    },
+    {
+      id: 2,
+      usename: "Azlan Alan",
+      comment: "sell old get new car..  get yours",
+    },
+    {
+      id: 3,
+      usename: "Yee Heikin",
+      comment:"A good platform to sell and buy car. I sell my car BGH7957 at good rate compared to the price trade-in to others used car. I also get new used car at perfect condition and reasonable price. No hidden costs with a year warranty.  Staff is friendly, helpful and efficiency. SUPERB!!!",
+    },
+    {
+      id: 4,
+      usename: "Ika Yusof",
+      comment: "jual beli kereta yg sah terpakai",
+    },
+    {
+      id: 5,
+      usename: " Mohd Shahriza Adnan",
+      comment:"-SOLD MYVI BUY GRAND LIVINA-AWESOME EXPERIENCE!!!CEPAT MUDAH DAN DIPERCAYAI.... HARGA YANG TINGGI.....THANKS A LOT... BYE MY SWEET WHITE...-CCJ3842-WELCOME HOME WHITE CUBBY-BMM3131-",
+    },
+  ]);
 
   const onChangeBuySell = (e) => {
     setInteractive(e.detail.value);
     setInitPage(0);
-  }
-
-
+  };
 
   return (
     <IonPage>
@@ -405,7 +433,7 @@ const HomePage = () => {
             options={{ slidesPerView: 1 }}
             style={{ paddingBottom: "20px" }}
           >
-            {historyListCar.map((item) => (
+            {listCarView.map((item) => (
               <IonSlide className={style.wHistory} key={item.id}>
                 <HistoryBrowCar historyListCar={item}></HistoryBrowCar>
               </IonSlide>
@@ -432,8 +460,10 @@ const HomePage = () => {
           <div className={style.how_it_work_title}>
             <h3>How It Works</h3>
           </div>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <IonSegment className={style.how_buy_sell} value={interactive}
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <IonSegment
+              className={style.how_buy_sell}
+              value={interactive}
               onIonChange={(e) => onChangeBuySell(e)}
             >
               <IonSegmentButton value="how_buy">
@@ -444,26 +474,89 @@ const HomePage = () => {
               </IonSegmentButton>
             </IonSegment>
           </div>
-          <div style={{marginTop:'32px'}}>
-            {interactive === 'how_buy' ?
+
+          {interactive === "how_buy" && (
+            <div style={{ marginTop: "32px" }}>
               <Swiper>
-                {listBuy.map((item,index) => (
-                  <SwiperSlide key ={index} className={style.how_buy_sell_swiper}>
+                {listBuy.map((item, index) => (
+                  <SwiperSlide
+                    key={index}
+                    className={style.how_buy_sell_swiper}
+                  >
                     <HowtoBuySell listItem={item} isBuy={true}></HowtoBuySell>
                   </SwiperSlide>
                 ))}
               </Swiper>
-              :
+            </div>
+          )}
+          {interactive === "how_sell" && (
+            <div style={{ marginTop: "32px" }}>
               <Swiper>
-                {listSell.map((item,index) => (
-                  <SwiperSlide key ={index} className={style.how_buy_sell_swiper}>
+                {listSell.map((item, index) => (
+                  <SwiperSlide
+                    key={index}
+                    className={style.how_buy_sell_swiper}
+                  >
                     <HowtoBuySell listItem={item} isBuy={false}></HowtoBuySell>
                   </SwiperSlide>
                 ))}
               </Swiper>
-            }
+            </div>
+          )}
+        </div>
+        <div className={style.happy_customer_total}>
+          <div className={style.happy_customer_title}>
+            <h3>Happy Customers</h3>
+          </div>
+          <div className={style.fb_review_total}>
+            <div className={style.fb_review_header}>
+              <div className={style.fb_vote_total}>
+                <div className={style.fb_vote_icon}></div>
+                <div className={style.fb_vote_rating_total}>
+                  <div className={style.fb_vote_rating_content}>
+                    <div className={style.fb_vote_rating_point}>4.9</div>
+                    <div className={style.fb_vote_rating_start}>
+                      <button
+                        type="button"
+                        className={style.fb_vote_rating_start_style}
+                      ></button>
+                      <button
+                        type="button"
+                        className={style.fb_vote_rating_start_style}
+                      ></button>
+                      <button
+                        type="button"
+                        className={style.fb_vote_rating_start_style}
+                      ></button>
+                      <button
+                        type="button"
+                        className={style.fb_vote_rating_start_style}
+                      ></button>
+                      <button
+                        type="button"
+                        className={style.fb_vote_rating_start_style}
+                      ></button>
+                    </div>
+                  </div>
+                  <div className={style.fb_vote_rate_foter}>
+                    Out of 2,598 total reviews
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={style.fb_review_body}>
+              <Swiper>
+                {listComment.map((item) => (
+                  <SwiperSlide key ={item.id} className={style.comment_slide}>
+                    <CommentUser listCmt = {item}></CommentUser>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
         </div>
+        <Footer></Footer>
       </IonContent>
     </IonPage>
   );

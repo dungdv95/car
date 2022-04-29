@@ -27,9 +27,11 @@ function HowtoBuySell(props) {
             <div className={style.card_text}>
                 {list.text}
             </div>
-            {/* {list.link ??
-                <a className={style.card_link}>View All Cars</a>
-            } */}
+            {list.link ?
+                <a href = "https://www.google.com/" className={style.card_link}>View All Cars</a>
+                :
+                <></>
+            }
         </div>
     );
 }

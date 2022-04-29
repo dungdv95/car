@@ -1,14 +1,4 @@
 .card_total {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
-    background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -35,14 +25,6 @@
     margin-right: 16px;
 }
 .card_img {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     word-wrap: break-word;
     white-space: normal;
     color: rgba(0,0,0,.87);
@@ -61,14 +43,6 @@
     overflow: hidden;
 }
 .card_img_buy {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     word-wrap: break-word;
     white-space: normal;
     color: rgba(0,0,0,.87);
@@ -86,14 +60,6 @@
 }
 
 .card_img_sell {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     word-wrap: break-word;
     white-space: normal;
     color: rgba(0,0,0,.87);
@@ -110,14 +76,6 @@
 }
 
 .card_img_sell>img {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     word-wrap: break-word;
     white-space: normal;
     color: rgba(0,0,0,.87);
@@ -140,14 +98,6 @@
 }
 
 .card_img_buy>img {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     word-wrap: break-word;
     white-space: normal;
     color: rgba(0,0,0,.87);
@@ -169,14 +119,6 @@
     height: 88px;
 }
 .card_icon_stt {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     word-wrap: break-word;
     white-space: normal;
     color: rgba(0,0,0,.87);
@@ -199,14 +141,6 @@
     border-radius: 0 4px 0 0;
 }
 .card_icon_stt_span {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     word-wrap: break-word;
     white-space: normal;
     cursor: default;
@@ -230,14 +164,6 @@
     border-radius: 0 0 0 50%;
 }
 .card_icon_stt_span >i {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     word-wrap: break-word;
     white-space: normal;
     cursor: default;
@@ -297,14 +223,6 @@
     line-height: 20px;
 }
 .card_text {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     word-wrap: break-word;
     white-space: normal;
     cursor: default;
@@ -325,14 +243,6 @@
     text-align: left;
 }
 .card_link {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     word-wrap: break-word;
     white-space: normal;
     background-repeat: no-repeat;
@@ -354,4 +264,5 @@
     line-height: 20px;
     color: #3d82c3;
     text-decoration-line: underline;
+    text-align: left;
 }

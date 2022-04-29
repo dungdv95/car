@@ -2,17 +2,6 @@
     padding: unset;
 }
 .mode_card_content {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
-    color: rgba(0,0,0,.87);
-    list-style: none;
-    box-sizing: inherit;
     margin: 0;
     border: 0;
     font: inherit;
@@ -25,14 +14,6 @@
     border-bottom-left-radius: 4px;
 }
 .mode_card_logo {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     color: rgba(0,0,0,.87);
     list-style: none;
     background-repeat: no-repeat;
@@ -45,14 +26,6 @@
     vertical-align: baseline;
 }
 .card_logo {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     box-sizing: inherit;
     margin: 0;
@@ -200,14 +173,6 @@
 }
 
 .card_name_car {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     background-repeat: no-repeat;
     box-sizing: inherit;
@@ -228,14 +193,6 @@
 }
 
 .ver_car {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     cursor: pointer;
     color: #2e2e2e;
@@ -254,14 +211,6 @@
 }
 
 .name_car {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     cursor: pointer;
     color: #2e2e2e;
@@ -280,14 +229,6 @@
 }
 .detail_car {
     text-align: left;
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     background-repeat: no-repeat;
     box-sizing: inherit;
@@ -302,14 +243,6 @@
 }
 
 .detail_car_span1 {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     color: #2e2e2e;
     background-repeat: no-repeat;
@@ -327,14 +260,6 @@
     content: "|";
 }
 .detail_car_span2 {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     color: #2e2e2e;
     background-repeat: no-repeat;
@@ -347,14 +272,6 @@
     vertical-align: baseline;
 }
 .card_tags {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     color: rgba(0,0,0,.87);
     list-style: none;
     background-repeat: no-repeat;
@@ -369,14 +286,6 @@
     padding: 8px 0;
 }
 .card_tags >span {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     background-repeat: no-repeat;
     box-sizing: inherit;
@@ -398,14 +307,6 @@
 }
 .card_price {
     text-align: left;
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     background-repeat: no-repeat;
     box-sizing: inherit;
@@ -418,14 +319,6 @@
     color: #e9280d;
 }
 .card_price_total {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     color: #e9280d;
     background-repeat: no-repeat;
@@ -442,14 +335,6 @@
     line-height: 16px;
 }
 .card_price_total >strong {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     color: #e9280d;
     background-repeat: no-repeat;
@@ -464,14 +349,6 @@
     line-height: 28px;
 }
 .card_price_month {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     color: #e9280d;
     background-repeat: no-repeat;
@@ -485,14 +362,6 @@
     display: inline-block;
 }
 .card_price_month_detail {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     background-repeat: no-repeat;
     box-sizing: inherit;
@@ -511,14 +380,6 @@
     line-height: 16px;
 }
 .card_price_month_detail_span1 {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     cursor: pointer;
     color: inherit;
@@ -532,14 +393,6 @@
     vertical-align: baseline;
 }
 .card_price_month_detail_span1 >strong {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     cursor: pointer;
     color: inherit;
@@ -553,14 +406,6 @@
     vertical-align: baseline;
 }
 .card_price_month_detail_span2 {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     cursor: pointer;
     color: inherit;
@@ -580,14 +425,6 @@
     background-size: cover;
 }
 .card_price_hidden {
-    -webkit-text-size-adjust: 100%;
-    word-break: normal;
-    tab-size: 4;
-    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(204,204,204,.3);
     list-style: none;
     color: #e9280d;
     background-repeat: no-repeat;
