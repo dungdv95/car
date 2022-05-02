@@ -9,10 +9,15 @@ import {
   IonList,
   IonPage,
   IonSelect,
-  IonSelectOption
+  IonSelectOption,
+  IonImg
 } from "@ionic/react";
 import { arrowDownCircle } from "ionicons/icons";
 import DropdownFooter from "./DropdownFooter";
+import malaysia from "../img/flags/malaysia.png";
+import indonesia from "../img/flags/indonesia.png";
+import thailan from "../img/flags/thailan.png";
+import singapore from "../img/flags/singapore.png";
 
 function Footer() {
   const [emailVal, setEmailVal] = useState("");
@@ -237,19 +242,19 @@ function Footer() {
           </dl>
         </div>
         <div className={style.footer_content_bottom}></div>
-        <IonList>
+        {/* <IonList> */}
           <IonItem>
             <IonSelect
-              value="enable"
+              value="malaysia"
               interface="popover"
             >
-              <IonSelectOption value="enable">ABC Enable</IonSelectOption>
-              <IonSelectOption value="mute">Mute</IonSelectOption>
-              <IonSelectOption value="mute_week">Mute for a week</IonSelectOption>
-              <IonSelectOption value="mute_year">Mute for a year</IonSelectOption>
+              <IonSelectOption value="malaysia"><img src={malaysia} />Malaysia</IonSelectOption>
+              <IonSelectOption value="indonesia"><IonImg src={indonesia} />Indonesia</IonSelectOption>
+              <IonSelectOption value="thailan"><IonImg src={thailan} />Thailand</IonSelectOption>
+              <IonSelectOption value="singapore"><IonImg src={singapore} />Singapore</IonSelectOption>
             </IonSelect>
           </IonItem>
-        </IonList>
+        {/* </IonList> */}
       </div>
     </div>
   );

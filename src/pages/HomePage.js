@@ -2,8 +2,6 @@ import { useState } from "react";
 import {
   IonContent,
   IonPage,
-  IonSlides,
-  IonSlide,
   IonImg,
   IonSearchbar,
   IonGrid,
@@ -15,9 +13,10 @@ import {
   IonLabel,
 } from "@ionic/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Keyboard, Pagination } from "swiper";
-import "swiper/css/navigation";
+import { Navigation, Keyboard, Pagination,Autoplay } from "swiper";
+import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import HowtoBuySell from "../components/HowtoBuySell";
 import ListCar from "../components/ListCar";
 import SearchListCar from "../components/SearchListCar";
@@ -295,7 +294,7 @@ const HomePage = () => {
     {
       id: 1,
       usename: "Atie Baharun",
-      comment:"Berbaloi...jual dan beli kereta di Carsome..service yang yang sangat bagus di samping staff yang awesome..jual kereta lama dengan harga yang tinggi..perbezaan harga yang ketara dengan syarikat kereta terpakai lain..kemudian dapat beli model kereta 2020 dengan diskaun lagi rm500 dan free gift lain hanya di Carsome..sangat berbaloi..saya syorkan Carsome pada anda semua👍👍👍",
+      comment: "Berbaloi...jual dan beli kereta di Carsome..service yang yang sangat bagus di samping staff yang awesome..jual kereta lama dengan harga yang tinggi..perbezaan harga yang ketara dengan syarikat kereta terpakai lain..kemudian dapat beli model kereta 2020 dengan diskaun lagi rm500 dan free gift lain hanya di Carsome..sangat berbaloi..saya syorkan Carsome pada anda semua👍👍👍",
     },
     {
       id: 2,
@@ -305,7 +304,7 @@ const HomePage = () => {
     {
       id: 3,
       usename: "Yee Heikin",
-      comment:"A good platform to sell and buy car. I sell my car BGH7957 at good rate compared to the price trade-in to others used car. I also get new used car at perfect condition and reasonable price. No hidden costs with a year warranty.  Staff is friendly, helpful and efficiency. SUPERB!!!",
+      comment: "A good platform to sell and buy car. I sell my car BGH7957 at good rate compared to the price trade-in to others used car. I also get new used car at perfect condition and reasonable price. No hidden costs with a year warranty.  Staff is friendly, helpful and efficiency. SUPERB!!!",
     },
     {
       id: 4,
@@ -315,7 +314,7 @@ const HomePage = () => {
     {
       id: 5,
       usename: " Mohd Shahriza Adnan",
-      comment:"-SOLD MYVI BUY GRAND LIVINA-AWESOME EXPERIENCE!!!CEPAT MUDAH DAN DIPERCAYAI.... HARGA YANG TINGGI.....THANKS A LOT... BYE MY SWEET WHITE...-CCJ3842-WELCOME HOME WHITE CUBBY-BMM3131-",
+      comment: "-SOLD MYVI BUY GRAND LIVINA-AWESOME EXPERIENCE!!!CEPAT MUDAH DAN DIPERCAYAI.... HARGA YANG TINGGI.....THANKS A LOT... BYE MY SWEET WHITE...-CCJ3842-WELCOME HOME WHITE CUBBY-BMM3131-",
     },
   ]);
 
@@ -328,20 +327,25 @@ const HomePage = () => {
     <IonPage>
       <IonContent fullscreen>
         <>
-          <IonSlides pager={true} options={slideOpts}>
-            <IonSlide>
+          <Swiper pagination={true} modules={[Autoplay,Pagination]} 
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+          }}
+          >
+            <SwiperSlide>
               <IonImg src={img3} />
-            </IonSlide>
-            <IonSlide>
+            </SwiperSlide>
+            <SwiperSlide>
               <IonImg src={img5} />
-            </IonSlide>
-            <IonSlide>
+            </SwiperSlide>
+            <SwiperSlide>
               <IonImg src={img2} />
-            </IonSlide>
-            <IonSlide>
+            </SwiperSlide>
+            <SwiperSlide>
               <IonImg src={img4} />
-            </IonSlide>
-          </IonSlides>
+            </SwiperSlide>
+          </Swiper>
         </>
         <>
           <IonGrid className={style.search_bar}>
@@ -368,22 +372,22 @@ const HomePage = () => {
         </>
         <SearchListCar></SearchListCar>
         <>
-          <IonSlides options={{ slidesPerView: 2 }}>
+          <Swiper slidesPerView={2}>
             {searchListText.map((item, index) => (
-              <IonSlide className={style.ion_slide_buttom} key={index}>
+              <SwiperSlide className={style.ion_slide_buttom} key={index}>
                 <IonButton className={style.w_buttom} color="light">
                   <span className={style.font_size_buttom}>{item}</span>
                 </IonButton>
-              </IonSlide>
+              </SwiperSlide>
             ))}
-            <IonSlide className={style.ion_slide_buttom}>
+            <SwiperSlide className={style.ion_slide_buttom}>
               <IonButton className={style.w_buttom} color="light">
                 <span className={`${style.font_size_buttom} ${style.bt_color}`}>
                   View All Cars
                 </span>
               </IonButton>
-            </IonSlide>
-          </IonSlides>
+            </SwiperSlide>
+          </Swiper>
         </>
         <>
           <div className={style.history_viewer}>
@@ -391,24 +395,24 @@ const HomePage = () => {
               <h3>Browsing History</h3>
             </div>
           </div>
-          <IonSlides
-            options={{ slidesPerView: 1 }}
+          <Swiper
+            slidesPerView={"auto"}
             style={{ paddingBottom: "20px" }}
           >
             {historyListCar.map((item) => (
-              <IonSlide className={style.wHistory} key={item.id}>
+              <SwiperSlide className={style.wHistory} key={item.id}>
                 <HistoryBrowCar historyListCar={item}></HistoryBrowCar>
-              </IonSlide>
+              </SwiperSlide>
             ))}
-            <IonSlide>
+            <SwiperSlide>
               <div className={style.view_more}>
                 <div className={style.view_more_detail}>
                   <i></i>
                   View More Cars
                 </div>
               </div>
-            </IonSlide>
-          </IonSlides>
+            </SwiperSlide>
+          </Swiper>
         </>
         <div className={style.car_popular_home}>
           <div
@@ -429,24 +433,24 @@ const HomePage = () => {
               ))}
             </div>
           </div>
-          <IonSlides
-            options={{ slidesPerView: 1 }}
+          <Swiper
+            slidesPerView={"auto"}
             style={{ paddingBottom: "20px" }}
           >
             {listCarView.map((item) => (
-              <IonSlide className={style.wHistory} key={item.id}>
+              <SwiperSlide className={style.wHistory} key={item.id}>
                 <HistoryBrowCar historyListCar={item}></HistoryBrowCar>
-              </IonSlide>
+              </SwiperSlide>
             ))}
-            <IonSlide>
+            <SwiperSlide>
               <div className={style.view_more_popular}>
                 <div className={style.view_more_popular_detail}>
                   <i></i>
                   View More Popular Cars
                 </div>
               </div>
-            </IonSlide>
-          </IonSlides>
+            </SwiperSlide>
+          </Swiper>
 
           <div className={style.car_popular_home_text}>
             <span>
@@ -548,8 +552,8 @@ const HomePage = () => {
             <div className={style.fb_review_body}>
               <Swiper>
                 {listComment.map((item) => (
-                  <SwiperSlide key ={item.id} className={style.comment_slide}>
-                    <CommentUser listCmt = {item}></CommentUser>
+                  <SwiperSlide key={item.id} className={style.comment_slide}>
+                    <CommentUser listCmt={item}></CommentUser>
                   </SwiperSlide>
                 ))}
               </Swiper>
