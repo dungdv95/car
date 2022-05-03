@@ -59,12 +59,12 @@
 }
 
 .title::before {
-    background: url('../img/title-left.svg') no-repeat;
+    background: url('../../img/title-left.svg') no-repeat;
     background-size: cover;
 }
 
 .title::after {
-    background: url('../img/title-right.svg') no-repeat;
+    background: url('../../img/title-right.svg') no-repeat;
     background-size: cover;
 }
 
@@ -157,7 +157,7 @@
     display: inline-block;
     vertical-align: bottom;
     
-    background: url('../img/tick.svg') no-repeat;
+    background: url('../../img/tick.svg') no-repeat;
     background-size: cover;
 }
 
@@ -178,7 +178,7 @@
     bottom: 0;
     display: block;
     content: "";
-    background: url('../img/car-popular-bg-line.svg') no-repeat;
+    background: url('../../img/car-popular-bg-line.svg') no-repeat;
     background-size: cover;
 }
 
@@ -287,7 +287,7 @@
     vertical-align: baseline;
     font-weight: 700;
     color: #173559;
-    background: url('../img/time.svg') 0 50% no-repeat;
+    background: url('../../img/time.svg') 0 50% no-repeat;
     padding-left: 20px;
     font-size: 20px;
     line-height: 24px;
@@ -384,7 +384,7 @@
     vertical-align: baseline;
     width: 40px;
     height: 40px;
-    background: url("../img/muiten.svg") no-repeat;
+    background: url("../../img/muiten.svg") no-repeat;
     background-size: cover;
     margin-bottom: 20px;
  }
@@ -469,7 +469,7 @@
     vertical-align: baseline;
     width: 34px;
     height: 25px;
-    background: url("../img/eye.svg") no-repeat;
+    background: url("../../img/eye.svg") no-repeat;
     background-size: cover;
     margin-bottom: 20px;
  }
@@ -550,7 +550,7 @@
     font-size: 100%;
     vertical-align: baseline;
     padding: 32px 0;
-    background: url("../img/happy_customer.jpg") no-repeat 100% 0;
+    background: url("../../img/happy_customer.jpg") no-repeat 100% 0;
     background-size: cover;
     display: flex!important;
     flex-direction: column!important;
@@ -705,7 +705,7 @@
     font-size: 100%;
     vertical-align: baseline;
     margin-right: 12px!important;
-    background: url("../img/fb_icon.svg") no-repeat;
+    background: url("../../img/fb_icon.svg") no-repeat;
     background-size: cover;
     width: 50px;
     height: 50px;

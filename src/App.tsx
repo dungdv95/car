@@ -11,10 +11,10 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle,homeOutline,carOutline,heart,person } from 'ionicons/icons';
-import HomePage from './pages/HomePage';
-import ShopCar from './pages/ShopCar';
-import FavoritesPage from './pages/FavoritesPage';
-import Account from './pages/Account'
+import HomePage from './pages/homepage/HomePage.js';
+import ShopCar from './pages/shopcar/ShopCar.js';
+import FavoritesPage from './pages/favorites/FavoritesPage.js';
+import Account from './pages/account/Account.js'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';

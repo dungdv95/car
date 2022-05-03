@@ -67,6 +67,7 @@
     vertical-align: baseline;
     color: #696c71;
     border-top: 1px solid #3c4251;
+    width: 190px;
 }
 .footer_content_header_left {
     color: #fff;
@@ -119,7 +120,7 @@
     text-indent: -9999em;
     width: 200px;
     height: 32px;
-    background: url("../img/footer-logo.svg") no-repeat;
+    background: url("../../img/footer-logo.svg") no-repeat;
     background-size: contain;
 }
 .footer_header_body {
@@ -625,7 +626,7 @@ footer_click_link_icon::after {
     background-size: 100% 100%!important;
     margin-right: 24px;
     margin-bottom: 20px;
-    background: #272d3c url("../img/chplay.png") no-repeat center center;
+    background: #272d3c url("../../img/chplay.png") no-repeat center center;
 }
 .footer_content_mid_total_icon_appstore {
     -webkit-text-size-adjust: 100%;
@@ -652,5 +653,5 @@ footer_click_link_icon::after {
     background-size: 100% 100%!important;
     margin-right: 24px;
     margin-bottom: 20px;
-    background: #272d3c url("../img/appstore.png") no-repeat center center;
+    background: #272d3c url("../../img/appstore.png") no-repeat center center;
 }

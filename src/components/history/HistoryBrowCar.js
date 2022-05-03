@@ -18,7 +18,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import logo from "../img/carsomelog.svg";
+import logo from "../../img/carsomelog.svg";
 
 
 function HistoryBrowCar(props) {

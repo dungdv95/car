@@ -10,14 +10,14 @@ import {
   IonPage,
   IonSelect,
   IonSelectOption,
-  IonImg
+  IonImg,
 } from "@ionic/react";
 import { arrowDownCircle } from "ionicons/icons";
 import DropdownFooter from "./DropdownFooter";
-import malaysia from "../img/flags/malaysia.png";
-import indonesia from "../img/flags/indonesia.png";
-import thailan from "../img/flags/thailan.png";
-import singapore from "../img/flags/singapore.png";
+import malaysia from "../../img/flags/malaysia.png";
+import indonesia from "../../img/flags/indonesia.png";
+import thailan from "../../img/flags/thailan.png";
+import singapore from "../../img/flags/singapore.png";
 
 function Footer() {
   const [emailVal, setEmailVal] = useState("");
@@ -241,20 +241,30 @@ function Footer() {
             </dd>
           </dl>
         </div>
-        <div className={style.footer_content_bottom}></div>
-        {/* <IonList> */}
+        <div className={style.footer_content_bottom}>
+        <IonList>
           <IonItem>
-            <IonSelect
-              value="malaysia"
-              interface="popover"
-            >
-              <IonSelectOption value="malaysia"><img src={malaysia} />Malaysia</IonSelectOption>
-              <IonSelectOption value="indonesia"><IonImg src={indonesia} />Indonesia</IonSelectOption>
-              <IonSelectOption value="thailan"><IonImg src={thailan} />Thailand</IonSelectOption>
-              <IonSelectOption value="singapore"><IonImg src={singapore} />Singapore</IonSelectOption>
+            <IonSelect value="malaysia" interface="popover">
+              <IonSelectOption value="malaysia">
+                {/* <img src={malaysia} /> */}
+                Malaysia
+              </IonSelectOption>
+              <IonSelectOption value="indonesia">
+                <IonImg src={indonesia} />
+                Indonesia
+              </IonSelectOption>
+              <IonSelectOption value="thailan">
+                <IonImg src={thailan} />
+                Thailand
+              </IonSelectOption>
+              <IonSelectOption value="singapore">
+                <IonImg src={singapore} />
+                Singapore
+              </IonSelectOption>
             </IonSelect>
           </IonItem>
-        {/* </IonList> */}
+        </IonList>
+        </div>
       </div>
     </div>
   );

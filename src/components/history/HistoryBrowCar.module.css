@@ -38,7 +38,7 @@
     color: inherit;
     width: 100px;
     height: 14px;
-    background: url("../img/carsomelog.svg") no-repeat;
+    background: url("../../img/carsomelog.svg") no-repeat;
     background-size: cover;
 }
 .card_content_button {
@@ -162,7 +162,7 @@
     vertical-align: baseline;
     width: 42px;
     height: 42px;
-    background: url("../img/heart.png") no-repeat;
+    background: url("../../img/heart.png") no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0;
@@ -421,7 +421,7 @@
     margin-left: 3px;
     width: 12px;
     height: 12px;
-    background: url('../img/detail.svg') no-repeat;
+    background: url('../../img/detail.svg') no-repeat;
     background-size: cover;
 }
 .card_price_hidden {

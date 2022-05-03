@@ -17,45 +17,45 @@ import { Navigation, Keyboard, Pagination,Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import HowtoBuySell from "../components/HowtoBuySell";
-import ListCar from "../components/ListCar";
-import SearchListCar from "../components/SearchListCar";
-import CommentUser from "../components/CommentUser"
-import Footer from "../components/Footer"
+import HowtoBuySell from "../../components/howtobuysell/HowtoBuySell.js";
+import ListCar from "../../components/car-list/ListCar.js";
+import SearchListCar from "../../components/search-list/SearchListCar.js";
+import CommentUser from "../../components/comment/CommentUser.js"
+import Footer from "../../components/footer/Footer"
 import style from "./HomePage.module.css";
-import img2 from "../img/2.jpg";
-import img3 from "../img/3.jpg";
-import img4 from "../img/4.jpg";
-import img5 from "../img/5.jpg";
-import car1 from "../img/car1.png";
-import car2 from "../img/car2.png";
-import car3 from "../img/car3.png";
-import car4 from "../img/car4.png";
-import HistoryBrowCar from "../components/HistoryBrowCar";
-import honda1 from "../img/car-brow/car1/car1.png";
-import honda2 from "../img/car-brow/car1/car2.png";
-import honda3 from "../img/car-brow/car1/car3.png";
-import honda4 from "../img/car-brow/car1/car4.png";
-import honda5 from "../img/car-brow/car1/car5.png";
-import honda6 from "../img/car-brow/car1/car6.png";
+import img2 from "../../img/2.jpg";
+import img3 from "../../img/3.jpg";
+import img4 from "../../img/4.jpg";
+import img5 from "../../img/5.jpg";
+import car1 from "../../img/car1.png";
+import car2 from "../../img/car2.png";
+import car3 from "../../img/car3.png";
+import car4 from "../../img/car4.png";
+import HistoryBrowCar from "../../components/history/HistoryBrowCar.js";
+import honda1 from "../../img/car-brow/car1/car1.png";
+import honda2 from "../../img/car-brow/car1/car2.png";
+import honda3 from "../../img/car-brow/car1/car3.png";
+import honda4 from "../../img/car-brow/car1/car4.png";
+import honda5 from "../../img/car-brow/car1/car5.png";
+import honda6 from "../../img/car-brow/car1/car6.png";
 
-import mecz1 from "../img/car-brow/car2/car1.png";
-import mecz2 from "../img/car-brow/car2/car2.png";
-import mecz3 from "../img/car-brow/car2/car3.png";
+import mecz1 from "../../img/car-brow/car2/car1.png";
+import mecz2 from "../../img/car-brow/car2/car2.png";
+import mecz3 from "../../img/car-brow/car2/car3.png";
 
-import proton1 from "../img/car-brow/car3/car1.png";
-import proton2 from "../img/car-brow/car3/car2.png";
-import proton3 from "../img/car-brow/car3/car3.png";
+import proton1 from "../../img/car-brow/car3/car1.png";
+import proton2 from "../../img/car-brow/car3/car2.png";
+import proton3 from "../../img/car-brow/car3/car3.png";
 
-import buy1 from "../img/buy1.svg";
-import buy2 from "../img/buy2.svg";
-import buy3 from "../img/buy3.svg";
-import buy4 from "../img/buy4.svg";
+import buy1 from "../../img/buy1.svg";
+import buy2 from "../../img/buy2.svg";
+import buy3 from "../../img/buy3.svg";
+import buy4 from "../../img/buy4.svg";
 
-import sell1 from "../img/sell1.jpg";
-import sell2 from "../img/sell2.jpg";
-import sell3 from "../img/sell3.jpg";
-import sell4 from "../img/sell4.jpg";
+import sell1 from "../../img/sell1.jpg";
+import sell2 from "../../img/sell2.jpg";
+import sell3 from "../../img/sell3.jpg";
+import sell4 from "../../img/sell4.jpg";
 
 const slideOpts = {
   autoplay: {
@@ -481,7 +481,7 @@ const HomePage = () => {
 
           {interactive === "how_buy" && (
             <div style={{ marginTop: "32px" }}>
-              <Swiper>
+              <Swiper slidesPerView={"auto"}>
                 {listBuy.map((item, index) => (
                   <SwiperSlide
                     key={index}
@@ -495,7 +495,7 @@ const HomePage = () => {
           )}
           {interactive === "how_sell" && (
             <div style={{ marginTop: "32px" }}>
-              <Swiper>
+              <Swiper slidesPerView={"auto"}>
                 {listSell.map((item, index) => (
                   <SwiperSlide
                     key={index}
@@ -550,7 +550,7 @@ const HomePage = () => {
             </div>
 
             <div className={style.fb_review_body}>
-              <Swiper>
+              <Swiper slidesPerView={"auto"}>
                 {listComment.map((item) => (
                   <SwiperSlide key={item.id} className={style.comment_slide}>
                     <CommentUser listCmt={item}></CommentUser>
