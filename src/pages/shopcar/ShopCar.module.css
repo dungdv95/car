@@ -1,0 +1,99 @@
+.search_custom {
+    padding: unset!important;
+    width: 94%;
+    margin: auto;
+}
+.list_custom {
+    padding-left: 0px;
+    padding-right: 82px;
+}
+.toolbar_custom {
+    --background: #fff;
+}
+.header_bar {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1248px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 1.2;
+    padding: 0 16px;
+    margin-top: 12px;
+}
+.header_bar_breadcrum {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.header_bar_breadcrum_filter {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    padding-left: 0;
+    list-style-type: none;
+}
+.header_bar_breadcrum_filter > h1 {
+    list-style-type: none;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    display: inline-flex;
+    letter-spacing: .4px;
+    color: #2e2e2e;
+    cursor: inherit;
+}
+.header_bar_city {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
+    background-color: #fdcf33;
+    border-radius: 16px;
+    padding: 0 6px 0 4px;
+    cursor: pointer;
+}
+.header_bar_city_name {
+    color: rgba(0,0,0,.87);
+    cursor: pointer;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin: 0 4px;
+}
