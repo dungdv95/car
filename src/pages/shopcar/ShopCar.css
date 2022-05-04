@@ -1,0 +1,5 @@
+.custom_select_filter_select_option {
+    font-size: 12px;
+    height: 35px;
+    --min-height: none;
+}
