@@ -313,7 +313,7 @@ const HomePage = () => {
 
   return (
     <IonPage>
-      <IonContent fullscreen>
+      <IonContent fullscreen className={style.back_ground_content}>
         <>
           <Swiper pagination={true} modules={[Autoplay,Pagination]} 
             autoplay={{

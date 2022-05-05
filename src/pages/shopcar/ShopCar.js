@@ -176,7 +176,7 @@ const ShopCar = () => {
 
   return (
     <IonPage className="shopcar_custom_global">
-      <IonContent fullscreen>
+      <IonContent fullscreen className={style.back_ground_content}>
         <div className={style.header_bar}>
           <div className={style.header_bar_breadcrum}>
             <div className={style.header_bar_breadcrum_filter}>

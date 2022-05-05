@@ -1169,3 +1169,6 @@
 .notify_body_email_input_box > input:focus+label {
     transform: translateY(-60%) scale(.75);
 }
+.back_ground_content {
+    --background:#fff;
+}

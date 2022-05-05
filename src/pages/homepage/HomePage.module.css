@@ -855,3 +855,6 @@
     width: 248px!important;
     margin-left: 16px;
 }
+.back_ground_content {
+    --background:#fff;
+}
