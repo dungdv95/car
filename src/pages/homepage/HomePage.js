@@ -13,7 +13,7 @@ import {
   IonLabel,
 } from "@ionic/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Keyboard, Pagination,Autoplay } from "swiper";
+import { Pagination,Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -56,18 +56,6 @@ import sell1 from "../../img/sell1.jpg";
 import sell2 from "../../img/sell2.jpg";
 import sell3 from "../../img/sell3.jpg";
 import sell4 from "../../img/sell4.jpg";
-
-const slideOpts = {
-  autoplay: {
-    disableOnInteraction: false,
-    delay: 5000,
-  },
-  loop: true,
-  // pagination: {
-  //   // type:'progressbar',
-  //   dynamicBullets:true
-  // }
-};
 
 const listBuy = [
   {

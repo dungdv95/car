@@ -3,3 +3,9 @@
     height: 35px;
     --min-height: none;
 }
+.pagination_bottom .pagination-container{
+    padding-left: unset;
+    justify-content: center;
+    margin-top: 6px;
+    margin-bottom: unset;
+}

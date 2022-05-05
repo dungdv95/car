@@ -21,7 +21,6 @@
 .header_bar {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     border: 0;
     font: inherit;
     vertical-align: baseline;
@@ -38,7 +37,6 @@
 .header_bar_breadcrum {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -49,7 +47,6 @@
 .header_bar_breadcrum_filter {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -62,7 +59,6 @@
 .header_bar_breadcrum_filter > h1 {
     list-style-type: none;
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -77,7 +73,6 @@
 .header_bar_city {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     border: 0;
     font: inherit;
@@ -97,7 +92,6 @@
     color: rgba(0,0,0,.87);
     cursor: pointer;
     background-repeat: no-repeat;
-    box-sizing: inherit;
     padding: 0;
     border: 0;
     font: inherit;
@@ -108,7 +102,6 @@
 .header_search {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     border: 0;
     font: inherit;
     font-size: 100%;
@@ -119,7 +112,6 @@
 .header_search_list_button {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -133,7 +125,6 @@
 .header_search_Model {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -147,7 +138,6 @@
 .header_search_body_type {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -161,7 +151,6 @@
 .header_search_budget {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -175,7 +164,6 @@
 .header_search_filter {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -188,7 +176,6 @@
 }
 .header_search_filter_btn {
     margin: 0;
-    box-sizing: inherit;
     font: inherit;
     overflow: visible;
     text-transform: none;
@@ -213,7 +200,6 @@
 .tag_list_filter {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     border: 0;
     font: inherit;
@@ -227,7 +213,6 @@
 .tag_list_btn_reset {
     white-space: nowrap;
     margin: 0;
-    box-sizing: inherit;
     font: inherit;
     overflow: visible;
     text-transform: none;
@@ -251,7 +236,6 @@
 .tag_list_btn_active_raya {
     white-space: nowrap;
     margin: 0;
-    box-sizing: inherit;
     font: inherit;
     text-transform: none;
     cursor: pointer;
@@ -277,7 +261,6 @@
 .tag_list_btn_most_view {
     white-space: nowrap;
     margin: 0;
-    box-sizing: inherit;
     font: inherit;
     text-transform: none;
     cursor: pointer;
@@ -303,7 +286,6 @@
 .tag_list_btn_tags {
     white-space: nowrap;
     margin: 0;
-    box-sizing: inherit;
     font: inherit;
     overflow: visible;
     text-transform: none;
@@ -328,7 +310,6 @@
     text-transform: none;
     cursor: pointer;
     background-repeat: no-repeat;
-    box-sizing: inherit;
     padding: 0;
     border: 0;
     font: inherit;
@@ -378,7 +359,6 @@
     cursor: pointer;
     color: #3d82c3;
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -395,7 +375,6 @@
     cursor: pointer;
     color: #2e2e2e;
     background-repeat: no-repeat;
-    box-sizing: inherit;
     padding: 0;
     border: 0;
     font: inherit;
@@ -412,7 +391,6 @@
     cursor: pointer;
     color: #2e2e2e;
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -432,7 +410,6 @@
     cursor: pointer;
     color: #2e2e2e;
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -447,7 +424,6 @@
     cursor: pointer;
     color: #2e2e2e;
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -460,7 +436,6 @@
     white-space: nowrap;
     background-repeat: no-repeat;
     padding: 0;
-    box-sizing: inherit;
     font: inherit;
     overflow: visible;
     text-transform: none;
@@ -512,7 +487,6 @@
 }
 .body_card_list {
     color: rgba(0,0,0,.87);
-    box-sizing: inherit;
     margin: 0;
     border: 0;
     font: inherit;
@@ -525,7 +499,6 @@
 .body_card_list_banner {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -538,7 +511,6 @@
 .body_card_list_banner_link {
     list-style: none;
     background-repeat: no-repeat;
-    box-sizing: inherit;
     background-color: transparent;
     margin: 0;
     padding: 0;
@@ -560,7 +532,6 @@
 .body_card_list_banner_theme {
     list-style: none;
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -582,7 +553,6 @@
     list-style: none;
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -596,7 +566,6 @@
 .body_card_list_banner1_theme_div2 {
     list-style: none;
     color: rgba(0,0,0,.87);
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -618,7 +587,6 @@
     list-style: none;
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -634,7 +602,6 @@
 .body_card_list_banner2_theme_div2 {
     list-style: none;
     color: rgba(0,0,0,.87);
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -656,7 +623,6 @@
 .body_card_list_banner3_theme_div2 {
     list-style: none;
     color: rgba(0,0,0,.87);
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -678,7 +644,6 @@
 .body_card_list_banner4_theme_div2 {
     list-style: none;
     color: rgba(0,0,0,.87);
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -700,7 +665,6 @@
 .body_card_list_banner5_theme_div2 {
     list-style: none;
     color: rgba(0,0,0,.87);
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -722,7 +686,6 @@
 .body_card_list_banner6_theme_div2 {
     list-style: none;
     color: rgba(0,0,0,.87);
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -744,7 +707,6 @@
 .body_card_list_banner7_theme_div2 {
     list-style: none;
     color: rgba(0,0,0,.87);
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -769,7 +731,6 @@
 .body_card_main {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -781,7 +742,6 @@
 .body_card_main_header {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     padding: 0;
     border: 0;
     font: inherit;
@@ -792,7 +752,6 @@
 .body_card_main_wraper {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     padding: 0;
     border: 0;
     font: inherit;
@@ -806,7 +765,6 @@
 }
 .body_card_main_header_total {
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -819,7 +777,6 @@
 .body_card_main_header_sort {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     margin: 0;
     padding: 0;
     border: 0;
@@ -845,7 +802,6 @@
 .body_card_main_wrapper {
     color: rgba(0,0,0,.87);
     background-repeat: no-repeat;
-    box-sizing: inherit;
     padding: 0;
     border: 0;
     font: inherit;
@@ -855,4 +811,361 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0;
+}
+.body_card_list_item {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    overflow: auto;
+    flex: 0 0 100%;
+    padding: 12px 16px;
+    margin: 0;
+}
+.list_card_bottom {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.notify_body {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin: 0;
+    background-color: #f6f7f8;
+    padding: 8px 16px 24px;
+}
+.notify_body_content {
+    color: rgba(0,0,0,.87);
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    max-width: 1200px;
+    padding: 16px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 4px;
+}
+.notify_body_content_panel {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.notify_body_content_img {
+    color: rgba(0,0,0,.87);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin-right: auto;
+    margin-left: auto;
+    background-position: 0 50%;
+    width: 230px;
+    height: 170px;
+    background: url("../../img/shop-car/panel_img.png") no-repeat;
+    background-size: cover;
+}
+.notify_body_content_wraper {
+    color: rgba(0,0,0,.87);
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    padding: 0 16px 16px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 4px;
+    width: auto;
+    min-width: calc(100% - 64px);
+}
+.notify_body_title {
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    margin-bottom: 4px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    color: #173559;
+    text-align: center;
+}
+.notify_body_title > p {
+    color: #173559;
+    text-align: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin-bottom: 0;
+}
+.notify_body_sub_title {
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    color: #173559;
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+.notify_body_sub_title > p {
+    color: #173559;
+    text-align: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin-bottom: 0;
+}
+.notify_body_email {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin: 12px 0 16px;
+}
+.notify_body_email_form {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.notify_body_email_input {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    display: flex!important;
+    position: relative;
+    height: 48px;
+    border: 1px solid #c8c9d0;
+    border-radius: 4px;
+}
+.notify_body_email_input_box {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.notify_body_email_label {
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    font-family: robotoregular,sans-serif;
+    font-size: 14px;
+    color: #b3bac3;
+    pointer-events: none;
+    transition: all .2s ease 0s;
+    transform-origin: left top;
+}
+.notify_body_bot {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.notify_body_button {
+    -webkit-text-size-adjust: 100%;
+    word-break: normal;
+    tab-size: 4;
+    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(204,204,204,.3);
+    margin: 0;
+    box-sizing: inherit;
+    font: inherit;
+    overflow: visible;
+    border-style: none;
+    font-family: Roboto,微软雅黑,Microsoft Yahei,Helvetica,Helvetica Neue,segoe UI Light,Kozuka Gothic Pro,sans-serif;
+    border-radius: 4px;
+    flex: 0 0 auto;
+    position: relative;
+    text-decoration: none;
+    transition-duration: .28s;
+    transition-property: box-shadow,transform,opacity;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-transform: none;
+    -webkit-appearance: button;
+    min-width: 64px;
+    padding: 0 16px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    text-indent: 0;
+    letter-spacing: 0;
+    box-shadow: inherit;
+    pointer-events: unset!important;
+    cursor: default;
+    background: #e6ebf2;
+    height: 40px;
+    width: 100%;
+}
+.notify_body_button_content {
+    user-select: none;
+    white-space: nowrap;
+    text-transform: none;
+    text-indent: 0;
+    letter-spacing: 0;
+    pointer-events: unset!important;
+    cursor: default;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    align-items: center;
+    color: inherit;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: inherit;
+    line-height: normal;
+    position: relative;
+    transition: inherit;
+    transition-property: opacity;
+}
+.notify_body_button_content_icon {
+    user-select: none;
+    white-space: nowrap;
+    text-transform: none;
+    text-indent: 0;
+    letter-spacing: 0;
+    pointer-events: unset!important;
+    cursor: default;
+    color: inherit;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    background-color: currentColor;
+    -webkit-mask-position: 0 0;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-image: url("../../img/shop-car/label.png");
+}
+/* .notify_body_button::before {
+    background-color: currentColor;
+    border-radius: inherit;
+    bottom: 0;
+    color: inherit;
+    content: "";
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity .2s cubic-bezier(.4,0,.6,1);
+} */
+.notify_body_input_email {
+    user-select: none;
+    --background: var(--ion-background-color, #fff);
+    --color: var(--ion-text-color, #000);
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-start: 0px;
+    --padding-end: 0px;
+    --overflow: auto;
+    --offset-top: 0px;
+    --offset-bottom: 51px;
+    --keyboard-offset: 0px;
+    -webkit-tap-highlight-color: transparent;
+    color: inherit;
+    touch-action: manipulation;
+    background-repeat: no-repeat;
+    margin: 0;
+    font: inherit;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    flex: 1 1;
+    padding: 0 16px;
+    border: 1px solid #f6f6f6;
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    padding-right: 45px;
+    padding-left: 16px;
+    font-family: robotobold,sans-serif;
+    font-size: 14px;
+    background-color: #f6f6f6;
+    caret-color: #fdcf33;
+}
+.notify_body_email_input_box > input:focus+label {
+    transform: translateY(-60%) scale(.75);
 }

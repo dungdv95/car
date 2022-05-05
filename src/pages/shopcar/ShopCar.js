@@ -1,27 +1,25 @@
 import {
   IonContent,
-  IonHeader,
   IonItem,
   IonList,
   IonPage,
   IonSearchbar,
-  IonTitle,
   IonToolbar,
-  IonImg,
   IonSelect,
   IonSelectOption,
 } from "@ionic/react";
-import { useRef, useState } from "react";
+import { useRef, useState, useMemo } from "react";
 import style from "./ShopCar.module.css";
 import location from "../../img/location.svg";
 import down from "../../img/down.svg";
 import raya from "../../img/raya.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Keyboard, Pagination, Autoplay } from "swiper";
+// import { Navigation, Keyboard, Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./ShopCar.css"
+import "./ShopCar.css";
+import PaginationTable from "../../components/pagination/PaginationTable.js";
 
 import honda1 from "../../img/car-brow/car1/car1.png";
 import honda2 from "../../img/car-brow/car1/car2.png";
@@ -37,11 +35,21 @@ import mecz3 from "../../img/car-brow/car2/car3.png";
 import proton1 from "../../img/car-brow/car3/car1.png";
 import proton2 from "../../img/car-brow/car3/car2.png";
 import proton3 from "../../img/car-brow/car3/car3.png";
+import ListTableShopCar from "../../components/listtableshopcar/ListTableShopCar.js";
+
+import { validateEmail } from "../../utils/validation.js";
+import Footer from "../../components/footer/Footer.js"
+
+let PageSize = 10;
 
 const ShopCar = () => {
   const listRef = useRef();
 
-  const [listCar,setListCar] = useState([
+  const [notifyValue, setNotifyValue] = useState("");
+
+  const [isDisabled, setIsdisabled] = useState(true);
+
+  const [listCar, setListCar] = useState([
     {
       id: 1,
       imgcar: [honda1, honda2, honda3, honda4, honda5, honda6],
@@ -95,7 +103,7 @@ const ShopCar = () => {
       priceTotal: "260,700",
       priceMonth: "2857/mo",
     },
-  ])
+  ]);
 
   const [valueSearch, setValueSearch] = useState("");
 
@@ -114,6 +122,8 @@ const ShopCar = () => {
     { id: 12, hidden: false, text: "Honda CR-G" },
     { id: 13, hidden: false, text: "Honda CR-H" },
   ]);
+
+  const [listSearched, setListSearched] = useState(["Honda", "BMW", "SUV"]);
 
   const onFocus = () => {
     listRef.current.style.display = "block";
@@ -141,6 +151,29 @@ const ShopCar = () => {
     listRef.current.style.display = "none";
   };
 
+  const changeNotify = (e) => {
+    // console.log(e.target.value)
+    let check = validateEmail(e.target.value)
+    // console.log(check)
+    if(check !== null) {
+      console.log(check)
+      setIsdisabled(false);
+    }
+    else {
+      console.log(check)
+      setIsdisabled(true);
+    }
+    setNotifyValue(e.target.value);
+  };
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // const currentTableData = useMemo(() => {
+  //   const firstPageIndex = (currentPage - 1) * PageSize;
+  //   const lastPageIndex = firstPageIndex + PageSize;
+  //   return data.slice(firstPageIndex, lastPageIndex);
+  // }, [currentPage]);
+
   return (
     <IonPage className="shopcar_custom_global">
       <IonContent fullscreen>
@@ -152,9 +185,9 @@ const ShopCar = () => {
           </div>
           <div>
             <div className={style.header_bar_city}>
-              <img src={location} />
+              <img src={location} alt="" />
               <span className={style.header_bar_city_name}>All States</span>
-              <img src={down} />
+              <img src={down} alt="" />
             </div>
           </div>
         </div>
@@ -215,26 +248,34 @@ const ShopCar = () => {
           </div>
 
           <div className={style.tag_list_filter}>
-            <button className={style.tag_list_btn_reset}>
-              <i className={style.tag_list_btn_reset_i}></i>Reset
-            </button>
-            <button className={style.tag_list_btn_active_raya}>
-              <img src={raya} />
-            </button>
-            <button className={style.tag_list_btn_most_view}>
-              <span className={style.tag_list_btn_most_view_span}>
-                <i className={style.tag_list_btn_most_view_i}></i>
-                <span>Most Viewed</span>
-              </span>
-            </button>
-            <button className={style.tag_list_btn_tags}>
-              <span className={style.tag_list_btn_span}>SUV</span>
-              <span className={style.tag_list_btn_btn}></span>
-            </button>
-            <button className={style.tag_list_btn_tags}>
-              <span className={style.tag_list_btn_span}>Honda</span>
-              <span className={style.tag_list_btn_btn}></span>
-            </button>
+            <Swiper slidesPerView={"auto"}>
+              <SwiperSlide style={{ width: "unset" }}>
+                <button className={style.tag_list_btn_reset}>
+                  <i className={style.tag_list_btn_reset_i}></i>Reset
+                </button>
+              </SwiperSlide>
+              <SwiperSlide style={{ width: "unset" }}>
+                <button className={style.tag_list_btn_active_raya}>
+                  <img src={raya} alt="" />
+                </button>
+              </SwiperSlide>
+              <SwiperSlide style={{ width: "unset" }}>
+                <button className={style.tag_list_btn_most_view}>
+                  <span className={style.tag_list_btn_most_view_span}>
+                    <i className={style.tag_list_btn_most_view_i}></i>
+                    <span>Most Viewed</span>
+                  </span>
+                </button>
+              </SwiperSlide>
+              {listSearched.map((item, index) => (
+                <SwiperSlide key={index} style={{ width: "unset" }}>
+                  <button className={style.tag_list_btn_tags}>
+                    <span className={style.tag_list_btn_span}>{item}</span>
+                    <span className={style.tag_list_btn_btn}></span>
+                  </button>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
         <div className={style.body_card_list}>
@@ -338,14 +379,53 @@ const ShopCar = () => {
                 </div>
                 <div className={style.body_card_main_header_sort}>
                   <IonItem className={style.custom_select_filter}>
-                    <IonSelect value="rec" interface="popover" className={style.custom_select_filter_select}>
-                      <IonSelectOption className="custom_select_filter_select_option" value="rec">Recommended</IonSelectOption>
-                      <IonSelectOption className="custom_select_filter_select_option" value="lowestprice">Lowest Price</IonSelectOption>
-                      <IonSelectOption className="custom_select_filter_select_option" value="highestprice">Highest Price</IonSelectOption>
-                      <IonSelectOption className="custom_select_filter_select_option" value="lowestmileage">Lowest Mileage</IonSelectOption>
-                      <IonSelectOption className="custom_select_filter_select_option" value="highestmileage">Highest Mileage</IonSelectOption>
-                      <IonSelectOption className="custom_select_filter_select_option" value="newtoold">New to Old</IonSelectOption>
-                      <IonSelectOption className="custom_select_filter_select_option" value="oldtonew">Old to New</IonSelectOption>
+                    <IonSelect
+                      value="rec"
+                      interface="popover"
+                      className={style.custom_select_filter_select}
+                    >
+                      <IonSelectOption
+                        className="custom_select_filter_select_option"
+                        value="rec"
+                      >
+                        Recommended
+                      </IonSelectOption>
+                      <IonSelectOption
+                        className="custom_select_filter_select_option"
+                        value="lowestprice"
+                      >
+                        Lowest Price
+                      </IonSelectOption>
+                      <IonSelectOption
+                        className="custom_select_filter_select_option"
+                        value="highestprice"
+                      >
+                        Highest Price
+                      </IonSelectOption>
+                      <IonSelectOption
+                        className="custom_select_filter_select_option"
+                        value="lowestmileage"
+                      >
+                        Lowest Mileage
+                      </IonSelectOption>
+                      <IonSelectOption
+                        className="custom_select_filter_select_option"
+                        value="highestmileage"
+                      >
+                        Highest Mileage
+                      </IonSelectOption>
+                      <IonSelectOption
+                        className="custom_select_filter_select_option"
+                        value="newtoold"
+                      >
+                        New to Old
+                      </IonSelectOption>
+                      <IonSelectOption
+                        className="custom_select_filter_select_option"
+                        value="oldtonew"
+                      >
+                        Old to New
+                      </IonSelectOption>
                     </IonSelect>
                   </IonItem>
                 </div>
@@ -353,16 +433,99 @@ const ShopCar = () => {
             </div>
             <div className={style.body_card_main_content}>
               <div className={style.body_card_main_wrapper}>
-                  {listCar.map((item) => (
-                    <div key={item.id} className={style.body_card_list_item}>
-                      a
-                    </div>
-                  ))}
+                {listCar.map((item) => (
+                  <div key={item.id} className={style.body_card_list_item}>
+                    <ListTableShopCar historyListCar={item}></ListTableShopCar>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className={style.body_card_main_botton}></div>
+            {/* <div className={style.body_card_main_botton}></div> */}
+            <div className={`${style.list_card_bottom} pagination_bottom`}>
+              <PaginationTable
+                className="pagination-bar"
+                currentPage={currentPage}
+                totalCount={100}
+                pageSize={PageSize}
+                onPageChange={(page) => setCurrentPage(page)}
+              />
+            </div>
+          </div>
+
+          <div className={style.notify_body}>
+            <div className={style.notify_body_content}>
+              <div className={style.notify_body_content_panel}>
+                <div className={style.notify_body_content_img}></div>
+                <div className={style.notify_body_content_wraper}>
+                  <div className={style.notify_body_title}>
+                    <p>Can't find what you're looking for?</p>
+                  </div>
+                  <div className={style.notify_body_sub_title}>
+                    <p>Get notified when we have new cars in store.</p>
+                  </div>
+                  {/* <div class="pop__filter-list" style="display:none;"></div> */}
+                  <div className={style.notify_body_email}>
+                    <form className={style.notify_body_email_form}>
+                      <div className={style.notify_body_email_input}>
+                        <div className={style.notify_body_email_input_box}>
+                          <input
+                            maxLength="60"
+                            type="text"
+                            value={notifyValue}
+                            onChange={(e) => {
+                              changeNotify(e);
+                            }}
+                            className={style.notify_body_input_email}
+                          />
+                          <label
+                            style={
+                              notifyValue.length > 0
+                                ? { transform: "translateY(-60%) scale(.75)" }
+                                : {}
+                            }
+                            className={style.notify_body_email_label}
+                          >
+                            Email
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div className={style.notify_body_bot}>
+                    {isDisabled ? (
+                      <button
+                        disabled="disabled"
+                        type="button"
+                        className={style.notify_body_button}
+                      >
+                        <span className={style.notify_body_button_content}>
+                          <i
+                            className={style.notify_body_button_content_icon}
+                          ></i>
+                          Notify Me
+                        </span>
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        className={style.notify_body_button}
+                        style={{backgroundColor:"#fdcf33",color:"#173559"}}
+                      >
+                        <span className={style.notify_body_button_content}>
+                          <i
+                            className={style.notify_body_button_content_icon}
+                          ></i>
+                          Notify Me
+                        </span>
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <Footer></Footer>
       </IonContent>
     </IonPage>
   );
