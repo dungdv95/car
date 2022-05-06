@@ -7,6 +7,7 @@ import {
   IonToolbar,
   IonSelect,
   IonSelectOption,
+  IonPopover
 } from "@ionic/react";
 import { useRef, useState, useMemo } from "react";
 import style from "./ShopCar.module.css";
@@ -39,6 +40,19 @@ import ListTableShopCar from "../../components/listtableshopcar/ListTableShopCar
 
 import { validateEmail } from "../../utils/validation.js";
 import Footer from "../../components/footer/Footer.js"
+import SearchCarPopOver from "../../components/searchpopover/SearchCarPopOver.js"
+import SearchTypePopover from "../../components/searchpopover/SearchTypePopover.js"
+import SearchBudgetPopover from "../../components/searchpopover/SearchBudgetPopover"
+
+import sedan from "../../img/shop-car/car-type/sedan.svg"
+import convertible from "../../img/shop-car/car-type/convertible.svg"
+import coupe from "../../img/shop-car/car-type/coupe.svg"
+import hatchback from "../../img/shop-car/car-type/hatchback.svg"
+import mpv from "../../img/shop-car/car-type/mpv.svg"
+import suv from "../../img/shop-car/car-type/suv.svg"
+import truck from "../../img/shop-car/car-type/truck.svg"
+import van from "../../img/shop-car/car-type/van.svg"
+import wagon from "../../img/shop-car/car-type/wagon.svg"
 
 let PageSize = 10;
 
@@ -122,6 +136,38 @@ const ShopCar = () => {
     { id: 12, hidden: false, text: "Honda CR-G" },
     { id: 13, hidden: false, text: "Honda CR-H" },
   ]);
+
+  const [searchCar,setSearchCar] = useState([
+    {id:1,nameCar:"BMV",totalNumber:38,
+    listModel:[
+      {id : 1,nameModel:"1",cntNumber:2},
+      {id : 2,nameModel:"2",cntNumber:2},
+      {id : 3,nameModel:"3",cntNumber:20},
+      {id : 4,nameModel:"5",cntNumber:4},
+      {id : 5,nameModel:"X1",cntNumber:7},
+      {id : 6,nameModel:"X3",cntNumber:2},
+      {id : 7,nameModel:"X5",cntNumber:1},
+    ]},
+    {id:2,nameCar:"Ford",totalNumber:6,
+    listModel:[
+      {id : 1,nameModel:"ECOSPORT",cntNumber:0},
+      {id : 2,nameModel:"FIESTA",cntNumber:3},
+      {id : 3,nameModel:"FOCUS",cntNumber:1},
+      {id : 4,nameModel:"RANGER",cntNumber:2},
+    ]},
+  ])
+
+  const [searchTypeCar,setSearchTypeCar] = useState([
+    {id:1,carImg:sedan,nameCar:"Sedan",numberCar:26},
+    {id:2,carImg:suv,nameCar:"SUV",numberCar:10},
+    {id:3,carImg:mpv,nameCar:"MPV",numberCar:0},
+    {id:4,carImg:hatchback,nameCar:"Hatchback",numberCar:3},
+    {id:5,carImg:coupe,nameCar:"Coupe",numberCar:1},
+    {id:6,carImg:truck,nameCar:"Truck",numberCar:2},
+    {id:7,carImg:wagon,nameCar:"Wagon",numberCar:0},
+    {id:8,carImg:convertible,nameCar:"Convertible",numberCar:0},
+    {id:9,carImg:van,nameCar:"Van",numberCar:0}
+  ])
 
   const [listSearched, setListSearched] = useState(["Honda", "BMW", "SUV"]);
 
@@ -228,17 +274,32 @@ const ShopCar = () => {
 
           <div className={style.header_search_list_button}>
             <div className={style.header_search_Model}>
-              <button className={style.header_search_filter_btn}>
+              <button id="btn_band_model" className={style.header_search_filter_btn}>
                 Brand &amp; Model
               </button>
+              <IonPopover trigger="btn_band_model" className={style.popover_custom}>
+                <IonContent>
+                    <SearchCarPopOver searchCarList={searchCar}></SearchCarPopOver>
+                </IonContent>
+              </IonPopover>
             </div>
             <div className={style.header_search_body_type}>
-              <button className={style.header_search_filter_btn}>
+              <button id="btn_type" className={style.header_search_filter_btn}>
                 Body Type
               </button>
+              <IonPopover trigger="btn_type" className={style.popover_custom}>
+                <IonContent>
+                    <SearchTypePopover searchTypeCar={searchTypeCar}></SearchTypePopover>
+                </IonContent>
+              </IonPopover>
             </div>
             <div className={style.header_search_budget}>
-              <button className={style.header_search_filter_btn}>Budget</button>
+              <button id="btn_budget" className={style.header_search_filter_btn}>Budget</button>
+              <IonPopover trigger="btn_budget" className={style.popover_custom}>
+                <IonContent>
+                    <SearchBudgetPopover searchTypeCar={searchTypeCar}></SearchBudgetPopover>
+                </IonContent>
+              </IonPopover>
             </div>
             <div className={style.header_search_filter}>
               <button className={style.header_search_filter_btn}>

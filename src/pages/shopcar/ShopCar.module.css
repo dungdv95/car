@@ -1172,3 +1172,6 @@
 .back_ground_content {
     --background:#fff;
 }
+.popover_custom {
+    --width:96%;
+}

@@ -1,0 +1,190 @@
+.popover_content {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    width: 100%;
+}
+.popover_content_wraper {
+    color: rgba(0,0,0,.87);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    overflow: auto;
+    overscroll-behavior: contain;
+    background: #fff;
+    border-radius: 4px;
+    height: auto;
+    max-height: calc(100% - 72px)!important;
+}
+.popover_content_bottom {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    padding: 12px 16px;
+    overflow: auto;
+    display: block;
+    box-shadow: 0 0 8px rgba(0,0,0,.1);
+}
+.popover_content_bottom_btn {
+    margin: 0;
+    box-sizing: inherit;
+    font: inherit;
+    overflow: visible;
+    text-transform: none;
+    cursor: pointer;
+    -webkit-appearance: button;
+    border-style: none;
+    font-family: Roboto,微软雅黑,Microsoft Yahei,Helvetica,Helvetica Neue,segoe UI Light,Kozuka Gothic Pro,sans-serif;
+    outline: none;
+    width: 100%;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #fdcf33;
+    background: #173559;
+    border-radius: 4px;
+}
+.popover_content_budget {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    padding: 12px 0 16px;
+    overflow: hidden;
+}
+.popover_content_budget_header {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0 16px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #000;
+}
+.popover_content_budget_header > p {
+    color: #000;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin-bottom: 16px;
+}
+.popover_content_budget_bottom {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 16px 0 8px;
+}
+.popover_content_budget_bottom_btn {
+    box-sizing: inherit;
+    font: inherit;
+    overflow: visible;
+    text-transform: none;
+    cursor: pointer;
+    -webkit-appearance: button;
+    border-style: none;
+    font-family: Roboto,微软雅黑,Microsoft Yahei,Helvetica,Helvetica Neue,segoe UI Light,Kozuka Gothic Pro,sans-serif;
+    outline: none;
+    width: calc(50% - 8px);
+    height: 40px;
+    padding: 0 6px;
+    margin: 8px 0 0 8px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    color: #2e2e2e;
+    text-align: center;
+    background: #f6f6f6;
+    border-radius: 4px;
+    position: static;
+}
+.popover_content_budget_range {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin: 16px 16px 8px;
+}
+.popover_content_budget_range_line {
+    color: rgba(0,0,0,.87);
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    display: flex;
+    justify-content: space-between;
+}
+.popover_content_budget_range_line_p {
+    box-sizing: inherit;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    display: inline-block;
+    padding: 4px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #173559;
+    background: #fdcf33;
+    border-radius: 4px;
+}
+.popover_budget_line {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    align-items: flex-start;
+    display: flex;
+    flex: 1 1 auto;
+    font-size: 16px;
+    letter-spacing: normal;
+    max-width: 100%;
+    text-align: left;
+    color: rgba(0,0,0,.87);
+}
