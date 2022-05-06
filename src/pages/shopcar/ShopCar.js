@@ -7,7 +7,8 @@ import {
   IonToolbar,
   IonSelect,
   IonSelectOption,
-  IonPopover
+  IonPopover,
+  IonModal
 } from "@ionic/react";
 import { useRef, useState, useMemo } from "react";
 import style from "./ShopCar.module.css";
@@ -229,13 +230,16 @@ const ShopCar = () => {
               <h1>Buy Car</h1>
             </div>
           </div>
-          <div>
+          <div id="modal_location">
             <div className={style.header_bar_city}>
               <img src={location} alt="" />
               <span className={style.header_bar_city_name}>All States</span>
               <img src={down} alt="" />
             </div>
           </div>
+          <IonModal trigger="modal_location">
+            <IonContent>Modal Content</IonContent>
+          </IonModal>
         </div>
         <div className={style.header_search}>
           <IonToolbar className={style.toolbar_custom}>

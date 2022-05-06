@@ -10,7 +10,7 @@ function SearchBudgetPopover() {
     const rangeRef = useRef();
     
     useEffect(() => {
-        console.log(rangeRef.current)
+        // console.log(rangeRef.current)
         rangeRef.current.value = {lower:0,upper:280000}
     }, []);
 

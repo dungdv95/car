@@ -5,7 +5,7 @@ import PopoverContent from "./PopoverContent.js";
 function SearchCarPopOver(props) {
   const searchListCar = props.searchCarList;
 
-  console.log(searchListCar);
+//   console.log(searchListCar);
   return (
     <div className={style.popover_content}>
       <div className={style.popover_content_wraper}>
