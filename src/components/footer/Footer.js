@@ -11,6 +11,9 @@ import {
   IonSelect,
   IonSelectOption,
   IonImg,
+  IonAvatar,
+  IonButton,
+  IonPopover
 } from "@ionic/react";
 import { arrowDownCircle } from "ionicons/icons";
 import DropdownFooter from "./DropdownFooter";
@@ -242,28 +245,37 @@ function Footer() {
           </dl>
         </div>
         <div className={style.footer_content_bottom}>
-        <IonList>
-          <IonItem>
-            <IonSelect value="malaysia" interface="popover">
-              <IonSelectOption value="malaysia">
-                {/* <img src={malaysia} /> */}
-                Malaysia
-              </IonSelectOption>
-              <IonSelectOption value="indonesia">
-                <IonImg src={indonesia} />
-                Indonesia
-              </IonSelectOption>
-              <IonSelectOption value="thailan">
-                <IonImg src={thailan} />
-                Thailand
-              </IonSelectOption>
-              <IonSelectOption value="singapore">
-                <IonImg src={singapore} />
-                Singapore
-              </IonSelectOption>
-            </IonSelect>
-          </IonItem>
-        </IonList>
+
+        {/* <IonButton id="trigger-button">Click to open popover</IonButton>
+        <IonPopover trigger="trigger-button">
+          <IonContent>Popover Content</IonContent>
+        </IonPopover> */}
+
+          <IonList>
+            <IonItem>
+              <IonSelect value="malaysia" interface="popover">
+                <IonSelectOption value="malaysia">
+                  {/* <img src={malaysia} /> */}
+                  <IonAvatar>
+                    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
+                  </IonAvatar>
+                  Malaysia
+                </IonSelectOption>
+                <IonSelectOption value="indonesia">
+                  <IonImg src={indonesia} />
+                  Indonesia
+                </IonSelectOption>
+                <IonSelectOption value="thailan">
+                  <IonImg src={thailan} />
+                  Thailand
+                </IonSelectOption>
+                <IonSelectOption value="singapore">
+                  <IonImg src={singapore} />
+                  Singapore
+                </IonSelectOption>
+              </IonSelect>
+            </IonItem>
+          </IonList>
         </div>
       </div>
     </div>

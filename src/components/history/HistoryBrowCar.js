@@ -32,8 +32,8 @@ function HistoryBrowCar(props) {
         }}
         modules={[Pagination]}>
         {listCar.imgcar.map((item, index) => (
-          <SwiperSlide className={style.wHistory} key={index} style={{height:'100%'}}>
-            <IonImg style={{ height: "172px", width: "288px" }} src={item} />
+          <SwiperSlide className={style.wHistory} key={index}>
+            <IonImg src={item} />
           </SwiperSlide>
         ))}
       </Swiper>

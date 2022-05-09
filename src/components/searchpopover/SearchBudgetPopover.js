@@ -6,13 +6,17 @@ import {
 
 
 function SearchBudgetPopover() {
-    const [rangeValue,setRangeValue] = useState()
+    const [rangeValue,setRangeValue] = useState({lower:0,upper:280000})
     const rangeRef = useRef();
     
     useEffect(() => {
         // console.log(rangeRef.current)
         rangeRef.current.value = {lower:0,upper:280000}
     }, []);
+    const onChangeRange = (e) => {
+      console.log(e.detail.value)
+      setRangeValue(e.detail.value)
+    }
 
   return (
     <div className={style.popover_content}>
@@ -25,15 +29,15 @@ function SearchBudgetPopover() {
           <div className={style.popover_content_budget_range}>
             <div className={style.popover_content_budget_range_line}>
               <p className={style.popover_content_budget_range_line_p}>
-                RM 97,000
+                RM {rangeValue.lower}
               </p>
               <p className={style.popover_content_budget_range_line_p}>
-                RM 280,000
+                RM {rangeValue.upper}
               </p>
             </div>
 
             <div className={style.popover_budget_line}>
-                <IonRange style={{padding:"unset"}} ref={rangeRef} dualKnobs={true} min={0} max={280000} step={3} onIonChange={e => setRangeValue(e.detail.value)} />
+                <IonRange style={{padding:"unset"}} ref={rangeRef} dualKnobs={true} min={0} max={280000} step={3} onIonChange={(e) => {onChangeRange(e)}} />
             </div>
 
             <div className={style.popover_content_budget_range_line}>

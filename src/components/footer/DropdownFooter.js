@@ -4,7 +4,7 @@ import style from "./DropdownFooter.module.css";
 function DropdownFooter(props) {
   const listFunciont = props.listItem;
   const [isOpen,setIsOpen] = useState(listFunciont.initOpen)
-  console.log(isOpen);
+  // console.log(isOpen);
   const onChangeFunction = () => {
     let revOpen = !isOpen;
     setIsOpen(revOpen);
