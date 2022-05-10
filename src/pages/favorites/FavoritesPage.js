@@ -272,7 +272,7 @@ const FavoritesPage = () => {
           <IonTitle>Favorites</IonTitle>
         </IonToolbar>
       </IonHeader>
-      {/* <IonContent fullscreen className={style.back_ground_content}  scrollEvents={true} onIonScroll={(e) => {handleScroll(e)}}> */}
+      <IonContent fullscreen className={style.back_ground_content}  scrollEvents={true} onIonScroll={(e) => {handleScroll(e)}}>
         <div className={style.header_bar}>
           {/* <div className={style.header_bar_breadcrum}>
             <div className={style.header_bar_breadcrum_filter}>
@@ -703,7 +703,7 @@ const FavoritesPage = () => {
           </div> */}
         </div>
         <Footer></Footer>
-      {/* </IonContent> */}
+      </IonContent>
     </IonPage>
   );
 };
