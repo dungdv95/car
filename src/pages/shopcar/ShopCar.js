@@ -276,7 +276,7 @@ const ShopCar = () => {
             </div>
           </div>
           <IonModal isOpen={showModal}>
-            <IonContent>
+            {/* <IonContent> */}
               <div className={style.location_content}>
                 <div className={style.location_content_box}>
                   <div className={style.location_content_box_header}>
@@ -315,7 +315,7 @@ const ShopCar = () => {
                   </div>
                 </div>
               </div>
-            </IonContent>
+            {/* </IonContent> */}
           </IonModal>
         </div>
         <div className={style.header_search}>
@@ -365,11 +365,11 @@ const ShopCar = () => {
                 trigger="btn_band_model"
                 className={style.popover_custom}
               >
-                <IonContent>
+                {/* <IonContent> */}
                   <SearchCarPopOver
                     searchCarList={searchCar}
                   ></SearchCarPopOver>
-                </IonContent>
+                {/* </IonContent> */}
               </IonPopover>
             </div>
             <div className={style.header_search_body_type}>
@@ -377,11 +377,11 @@ const ShopCar = () => {
                 Body Type
               </button>
               <IonPopover trigger="btn_type" className={style.popover_custom}>
-                <IonContent>
+                {/* <IonContent> */}
                   <SearchTypePopover
                     searchTypeCar={searchTypeCar}
                   ></SearchTypePopover>
-                </IonContent>
+                {/* </IonContent> */}
               </IonPopover>
             </div>
             <div className={style.header_search_budget}>
@@ -392,11 +392,11 @@ const ShopCar = () => {
                 Budget
               </button>
               <IonPopover trigger="btn_budget" className={style.popover_custom}>
-                <IonContent>
+                {/* <IonContent> */}
                   <SearchBudgetPopover
                     searchTypeCar={searchTypeCar}
                   ></SearchBudgetPopover>
-                </IonContent>
+                {/* </IonContent> */}
               </IonPopover>
             </div>
             <div
@@ -408,9 +408,9 @@ const ShopCar = () => {
               </button>
             </div>
             <IonModal isOpen={showModalFilter}>
-              <IonContent>
+              {/* <IonContent> */}
                 <ModalFilter closedModal={setClosedModal}></ModalFilter>
-              </IonContent>
+              {/* </IonContent> */}
             </IonModal>
           </div>
 

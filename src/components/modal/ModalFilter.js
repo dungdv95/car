@@ -13,6 +13,8 @@ import truck from "../../img/shop-car/car-type/truck.svg";
 import van from "../../img/shop-car/car-type/van.svg";
 import wagon from "../../img/shop-car/car-type/wagon.svg";
 
+import ModalModel from "./ModalModel.js"
+
 function ModalFilter(props) {
   // console.log(props);
   const closedModal = props.closedModal;
@@ -77,6 +79,7 @@ function ModalFilter(props) {
     setValueMileage(e.detail.value);
   };
 
+  const refContainer = useRef();
   const refModel = useRef();
   const refType = useRef();
   const refBudget = useRef();
@@ -89,10 +92,33 @@ function ModalFilter(props) {
 
   const [activeBtn,setActiveBtn] = useState("model");
 
-  console.log(activeBtn)
+  // console.log(activeBtn)
+
+  const [isOpenModel,setOpenModel] = useState(false);
+
+  const showHideModel = () => {
+    let isReverse = !isOpenModel;
+    setOpenModel(isReverse);
+  }
+  console.log(isOpenModel)
+
+  // const scrollHandle = () => {
+  //   console.log("first")
+  // }
+
+  const handleScroll = (e) => {
+    console.log(e)
+  }
+
+  useEffect(() => {
+
+    refContainer.current.scroll = (e) => {
+      console.log(e)
+    }
+  },[]);
 
   return (
-    <div className={style.location_content}>
+    <div  ref={refContainer}  className={style.location_content}>
       <div className={style.location_content_box}>
         <div className={style.location_content_box_header}>
           <span style={{ width: "24px" }}></span>
@@ -106,12 +132,12 @@ function ModalFilter(props) {
           ></img>
         </div>
 
-        <div className={style.location_content_middle}>
+        <div className={style.location_content_middle} >
           <div className={style.location_content_nav}>
             <button
               onClick={() => {
                 setActiveBtn("model")
-                refModel.current.scrollIntoView(true);
+                refModel.current.scrollIntoView({behavior: "smooth"});
               }}
               type="button"
               className={activeBtn === "model" ? style.location_content_btn_active : style.location_content_btn}
@@ -121,7 +147,7 @@ function ModalFilter(props) {
             <button
               onClick={() => {
                 setActiveBtn("type")
-                refType.current.scrollIntoView(true);
+                refType.current.scrollIntoView({behavior: "smooth"});
               }}
               type="button"
               className={activeBtn === "type" ? style.location_content_btn_active : style.location_content_btn}
@@ -131,7 +157,7 @@ function ModalFilter(props) {
             <button
               onClick={() => {
                 setActiveBtn("budget")
-                refBudget.current.scrollIntoView(true);
+                refBudget.current.scrollIntoView({behavior: "smooth"});
               }}
               type="button"
               className={activeBtn === "budget" ? style.location_content_btn_active : style.location_content_btn}
@@ -141,7 +167,7 @@ function ModalFilter(props) {
             <button
               onClick={() => {
                 setActiveBtn("year")
-                refYear.current.scrollIntoView(true);
+                refYear.current.scrollIntoView({behavior: "smooth"});
               }}
               type="button"
               className={activeBtn === "year" ? style.location_content_btn_active : style.location_content_btn}
@@ -151,7 +177,7 @@ function ModalFilter(props) {
             <button
               onClick={() => {
                 setActiveBtn("trans")
-                refTrans.current.scrollIntoView(true);
+                refTrans.current.scrollIntoView({behavior: "smooth"});
               }}
               type="button"
               className={activeBtn === "trans" ? style.location_content_btn_active : style.location_content_btn}
@@ -161,7 +187,7 @@ function ModalFilter(props) {
             <button
               onClick={() => {
                 setActiveBtn("mileage")
-                refMileage.current.scrollIntoView(true);
+                refMileage.current.scrollIntoView({behavior: "smooth"});
               }}
               type="button"
               className={activeBtn === "mileage" ? style.location_content_btn_active : style.location_content_btn}
@@ -171,7 +197,7 @@ function ModalFilter(props) {
             <button
               onClick={() => {
                 setActiveBtn("color")
-                refColor.current.scrollIntoView(true);
+                refColor.current.scrollIntoView({behavior: "smooth"});
               }}
               type="button"
               className={activeBtn === "color" ? style.location_content_btn_active : style.location_content_btn}
@@ -181,7 +207,7 @@ function ModalFilter(props) {
             <button
               onClick={() => {
                 setActiveBtn("certified")
-                refCerti.current.scrollIntoView(true);
+                refCerti.current.scrollIntoView({behavior: "smooth"});
               }}
               type="button"
               className={activeBtn === "certified" ? style.location_content_btn_active : style.location_content_btn}
@@ -191,7 +217,7 @@ function ModalFilter(props) {
             <button
               onClick={() => {
                 setActiveBtn("store")
-                refStore.current.scrollIntoView(true);
+                refStore.current.scrollIntoView({behavior: "smooth"});
               }}
               type="button"
               className={activeBtn === "store" ? style.location_content_btn_active : style.location_content_btn}
@@ -206,23 +232,7 @@ function ModalFilter(props) {
                 <div className={style.model_sub_make_model}>
                   <div className={style.make_model_tree}>
                     {searchCar.map((item) => (
-                      <div key={item.id} className={style.make_model_tree_item}>
-                        <div className={style.make_model_tree_item_header}>
-                          <div className={style.make_model_tree_item_title}>
-                            <span>{item.nameCar}</span>
-                            <span style={{ color: "#959ca4" }}>
-                              ({item.totalNumber})
-                            </span>
-                          </div>
-                          <div className={style.make_model_tree_item_arrows}>
-                            <i
-                              className={style.make_model_tree_item_arrows_i}
-                            ></i>
-                          </div>
-                        </div>
-
-                        <div className={style.make_model_content}></div>
-                      </div>
+                      <ModalModel key={item.id} modelList={item} />
                     ))}
                   </div>
                 </div>
