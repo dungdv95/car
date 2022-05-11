@@ -21,7 +21,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./ShopCar.css";
+import "./ShopCars.css";
 import PaginationTable from "../../components/pagination/PaginationTable.js";
 
 import honda1 from "../../img/car-brow/car1/car1.png";
@@ -356,13 +356,13 @@ const ShopCar = () => {
           <div className={style.header_search_list_button}>
             <div className={style.header_search_Model}>
               <button
-                id="btn_band_model"
+                id="btn_shop_car_model"
                 className={style.header_search_filter_btn}
               >
                 Brand &amp; Model
               </button>
               <IonPopover
-                trigger="btn_band_model"
+                trigger="btn_shop_car_model"
                 className={style.popover_custom}
               >
                 {/* <IonContent> */}
@@ -373,10 +373,10 @@ const ShopCar = () => {
               </IonPopover>
             </div>
             <div className={style.header_search_body_type}>
-              <button id="btn_type" className={style.header_search_filter_btn}>
+              <button id="btn_shop_car_type" className={style.header_search_filter_btn}>
                 Body Type
               </button>
-              <IonPopover trigger="btn_type" className={style.popover_custom}>
+              <IonPopover trigger="btn_shop_car_type" className={style.popover_custom}>
                 {/* <IonContent> */}
                   <SearchTypePopover
                     searchTypeCar={searchTypeCar}
@@ -386,12 +386,12 @@ const ShopCar = () => {
             </div>
             <div className={style.header_search_budget}>
               <button
-                id="btn_budget"
+                id="btn_shop_car_budget"
                 className={style.header_search_filter_btn}
               >
                 Budget
               </button>
-              <IonPopover trigger="btn_budget" className={style.popover_custom}>
+              <IonPopover trigger="btn_shop_car_budget" className={style.popover_custom}>
                 {/* <IonContent> */}
                   <SearchBudgetPopover
                     searchTypeCar={searchTypeCar}

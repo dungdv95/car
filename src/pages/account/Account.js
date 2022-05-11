@@ -36,7 +36,7 @@ const Account = () => {
       <h3 className={style.name_user}>
         <strong>Dũng Dương</strong>
       </h3>
-      <IonContent fullscreen scrollX={false} scrollY={false}>
+      <IonContent fullscreen className={style.content_custom}>
         <IonCard>
           <div className={style.model_sub_content}>
             <div className={style.model_sub_make_model}>
