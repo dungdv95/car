@@ -1,0 +1,442 @@
+.pd_card_content {
+    padding: unset;
+}
+.mode_card_content {
+    margin: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    position: relative;
+    padding: 12px 16px;
+    background: #fff;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.mode_card_logo {
+    color: rgba(0,0,0,.87);
+    list-style: none;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.card_logo {
+    list-style: none;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    cursor: pointer;
+    color: inherit;
+    width: 100px;
+    height: 14px;
+    background: url("../../img/carsomelog.svg") no-repeat;
+    background-size: cover;
+}
+.card_content_button {
+    -webkit-text-size-adjust: 100%;
+    word-break: normal;
+    tab-size: 4;
+    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(204,204,204,.3);
+    list-style: none;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    font: inherit;
+    overflow: visible;
+    background-color: transparent;
+    font-family: Roboto,微软雅黑,Microsoft Yahei,Helvetica,Helvetica Neue,segoe UI Light,Kozuka Gothic Pro,sans-serif;
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    font-weight: 500;
+    letter-spacing: .0892857143em;
+    justify-content: center;
+    outline: 0;
+    text-decoration: none;
+    text-indent: .0892857143em;
+    transition-duration: .28s;
+    transition-property: box-shadow,transform,opacity;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    cursor: pointer;
+    -webkit-appearance: button;
+    color: #fff;
+    font-size: .75rem;
+    height: 40px;
+    width: 40px;
+    text-transform: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    margin: 0!important;
+    border: none;
+    border-radius: 0;
+    transform: translate(-12px,50%);
+}
+.card_content_button::before {
+    background-color: currentColor;
+    border-radius: inherit;
+    bottom: 0;
+    color: inherit;
+    content: "";
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity .2s cubic-bezier(.4,0,.6,1);
+}
+.card_content_span {
+    -webkit-text-size-adjust: 100%;
+    word-break: normal;
+    tab-size: 4;
+    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(204,204,204,.3);
+    list-style: none;
+    letter-spacing: .0892857143em;
+    text-indent: .0892857143em;
+    user-select: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-transform: none;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    align-items: center;
+    color: inherit;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: inherit;
+    line-height: normal;
+    position: relative;
+    transition: inherit;
+    transition-property: opacity;
+}
+.card_heart_logo {
+    -webkit-text-size-adjust: 100%;
+    word-break: normal;
+    tab-size: 4;
+    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(204,204,204,.3);
+    list-style: none;
+    letter-spacing: .0892857143em;
+    text-indent: .0892857143em;
+    user-select: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-transform: none;
+    color: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    width: 42px;
+    height: 42px;
+    background: url("../../img/heart.png") no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0;
+    transition: background-position 0.01s;
+}
+.card_heart_logo:hover {
+    background-position: 100%;
+}
+
+.card_name_car {
+    list-style: none;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    background-color: transparent;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    padding: 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #2e2e2e;
+    text-align: left;
+}
+
+.ver_car {
+    list-style: none;
+    cursor: pointer;
+    color: #2e2e2e;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    padding-right: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.name_car {
+    list-style: none;
+    cursor: pointer;
+    color: #2e2e2e;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    padding-right: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.detail_car {
+    text-align: left;
+    list-style: none;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    font-size: 12px;
+    line-height: 14px;
+    color: #2e2e2e;
+}
+
+.detail_car_span1 {
+    list-style: none;
+    color: #2e2e2e;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.detail_car_span1::after {
+    padding-right: 4px;
+    padding-left: 4px;
+    content: "|";
+}
+.detail_car_span2 {
+    list-style: none;
+    color: #2e2e2e;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.card_tags {
+    color: rgba(0,0,0,.87);
+    list-style: none;
+    background-repeat: no-repeat;
+    margin: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box!important;
+    display: flex;
+    height: 34px;
+    padding: 8px 0;
+}
+.card_tags >span {
+    list-style: none;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    font: inherit;
+    vertical-align: baseline;
+    width: auto;
+    height: fit-content;
+    padding: 0 4px;
+    margin-right: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #3d82c3;
+    white-space: nowrap;
+    border: 1px solid #3d82c3;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card_price {
+    text-align: left;
+    list-style: none;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    color: #e9280d;
+}
+.card_price_total {
+    list-style: none;
+    color: #e9280d;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+}
+.card_price_total >strong {
+    list-style: none;
+    color: #e9280d;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+}
+.card_price_month {
+    list-style: none;
+    color: #e9280d;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    display: inline-block;
+}
+.card_price_month_detail {
+    list-style: none;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    cursor: pointer;
+    color: inherit;
+    display: flex!important;
+    justify-content: flex-end!important;
+    align-items: center!important;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+}
+.card_price_month_detail_span1 {
+    list-style: none;
+    cursor: pointer;
+    color: inherit;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.card_price_month_detail_span1 >strong {
+    list-style: none;
+    cursor: pointer;
+    color: inherit;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.card_price_month_detail_span2 {
+    list-style: none;
+    cursor: pointer;
+    color: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    flex-shrink: 0!important;
+    display: inline-block;
+    margin-left: 3px;
+    width: 12px;
+    height: 12px;
+    background: url('../../img/detail.svg') no-repeat;
+    background-size: cover;
+}
+.card_price_hidden {
+    list-style: none;
+    color: #e9280d;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    display: none;
+}
+.wHistory {
+    /* height: 172px; */
+}
