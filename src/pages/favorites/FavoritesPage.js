@@ -261,9 +261,6 @@ const FavoritesPage = () => {
     { id: 8, imgLocation: Selangor, nameLocation: "Selangor" },
   ]);
 
-  const handleScroll = (e) => {
-    console.log(e)
-  }
 
   return (
     <IonPage className="shopcar_custom_global">
@@ -272,7 +269,7 @@ const FavoritesPage = () => {
           <IonTitle>Favorites</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen className={style.back_ground_content}  scrollEvents={true} onIonScroll={(e) => {handleScroll(e)}}>
+      <IonContent fullscreen className={style.back_ground_content}>
         <div className={style.header_bar}>
           {/* <div className={style.header_bar_breadcrum}>
             <div className={style.header_bar_breadcrum_filter}>

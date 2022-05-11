@@ -13,7 +13,7 @@ import truck from "../../img/shop-car/car-type/truck.svg";
 import van from "../../img/shop-car/car-type/van.svg";
 import wagon from "../../img/shop-car/car-type/wagon.svg";
 
-import ModalModel from "./ModalModel.js"
+import ModalModel from "./ModalModel.js";
 
 function ModalFilter(props) {
   // console.log(props);
@@ -90,35 +90,47 @@ function ModalFilter(props) {
   const refCerti = useRef();
   const refStore = useRef();
 
-  const [activeBtn,setActiveBtn] = useState("model");
+  const [activeBtn, setActiveBtn] = useState("model");
 
   // console.log(activeBtn)
 
-  const [isOpenModel,setOpenModel] = useState(false);
+  const [isOpenModel, setOpenModel] = useState(false);
 
   const showHideModel = () => {
     let isReverse = !isOpenModel;
     setOpenModel(isReverse);
-  }
-  console.log(isOpenModel)
+  };
 
   // const scrollHandle = () => {
   //   console.log("first")
   // }
 
-  const handleScroll = (e) => {
-    console.log(e)
-  }
-
   useEffect(() => {
+    // function updateScrollPosition() {
+    //   // update the scroll positio
+    //   console.log(refContainer.current.scrollTop + '---' + refContainer.current.scrollBottom)
+    // }
 
-    refContainer.current.scroll = (e) => {
-      console.log(e)
-    }
-  },[]);
+    
+
+    // if (refContainer && refContainer.current) {
+    //   refContainer.current.addEventListener(
+    //     "scroll",
+    //     updateScrollPosition,
+    //     false
+    //   );
+    //   return function cleanup() {
+    //     refContainer.current.removeEventListener(
+    //       "scroll",
+    //       updateScrollPosition,
+    //       false
+    //     );
+    //   };
+    // }
+  }, []);
 
   return (
-    <div  ref={refContainer}  className={style.location_content}>
+    <div className={style.location_content}>
       <div className={style.location_content_box}>
         <div className={style.location_content_box_header}>
           <span style={{ width: "24px" }}></span>
@@ -132,100 +144,136 @@ function ModalFilter(props) {
           ></img>
         </div>
 
-        <div className={style.location_content_middle} >
+        <div className={style.location_content_middle}>
           <div className={style.location_content_nav}>
             <button
               onClick={() => {
-                setActiveBtn("model")
-                refModel.current.scrollIntoView({behavior: "smooth"});
+                setActiveBtn("model");
+                refModel.current.scrollIntoView({ behavior: "smooth" });
               }}
               type="button"
-              className={activeBtn === "model" ? style.location_content_btn_active : style.location_content_btn}
+              className={
+                activeBtn === "model"
+                  ? style.location_content_btn_active
+                  : style.location_content_btn
+              }
             >
               Brand & Model
             </button>
             <button
               onClick={() => {
-                setActiveBtn("type")
-                refType.current.scrollIntoView({behavior: "smooth"});
+                setActiveBtn("type");
+                refType.current.scrollIntoView({ behavior: "smooth" });
               }}
               type="button"
-              className={activeBtn === "type" ? style.location_content_btn_active : style.location_content_btn}
+              className={
+                activeBtn === "type"
+                  ? style.location_content_btn_active
+                  : style.location_content_btn
+              }
             >
               Body Type
             </button>
             <button
               onClick={() => {
-                setActiveBtn("budget")
-                refBudget.current.scrollIntoView({behavior: "smooth"});
+                setActiveBtn("budget");
+                refBudget.current.scrollIntoView({ behavior: "smooth" });
               }}
               type="button"
-              className={activeBtn === "budget" ? style.location_content_btn_active : style.location_content_btn}
+              className={
+                activeBtn === "budget"
+                  ? style.location_content_btn_active
+                  : style.location_content_btn
+              }
             >
               Budget
             </button>
             <button
               onClick={() => {
-                setActiveBtn("year")
-                refYear.current.scrollIntoView({behavior: "smooth"});
+                setActiveBtn("year");
+                refYear.current.scrollIntoView({ behavior: "smooth" });
               }}
               type="button"
-              className={activeBtn === "year" ? style.location_content_btn_active : style.location_content_btn}
+              className={
+                activeBtn === "year"
+                  ? style.location_content_btn_active
+                  : style.location_content_btn
+              }
             >
               Year
             </button>
             <button
               onClick={() => {
-                setActiveBtn("trans")
-                refTrans.current.scrollIntoView({behavior: "smooth"});
+                setActiveBtn("trans");
+                refTrans.current.scrollIntoView({ behavior: "smooth" });
               }}
               type="button"
-              className={activeBtn === "trans" ? style.location_content_btn_active : style.location_content_btn}
+              className={
+                activeBtn === "trans"
+                  ? style.location_content_btn_active
+                  : style.location_content_btn
+              }
             >
               Transmission
             </button>
             <button
               onClick={() => {
-                setActiveBtn("mileage")
-                refMileage.current.scrollIntoView({behavior: "smooth"});
+                setActiveBtn("mileage");
+                refMileage.current.scrollIntoView({ behavior: "smooth" });
               }}
               type="button"
-              className={activeBtn === "mileage" ? style.location_content_btn_active : style.location_content_btn}
+              className={
+                activeBtn === "mileage"
+                  ? style.location_content_btn_active
+                  : style.location_content_btn
+              }
             >
               Mileage
             </button>
             <button
               onClick={() => {
-                setActiveBtn("color")
-                refColor.current.scrollIntoView({behavior: "smooth"});
+                setActiveBtn("color");
+                refColor.current.scrollIntoView({ behavior: "smooth" });
               }}
               type="button"
-              className={activeBtn === "color" ? style.location_content_btn_active : style.location_content_btn}
+              className={
+                activeBtn === "color"
+                  ? style.location_content_btn_active
+                  : style.location_content_btn
+              }
             >
               Color
             </button>
             <button
               onClick={() => {
-                setActiveBtn("certified")
-                refCerti.current.scrollIntoView({behavior: "smooth"});
+                setActiveBtn("certified");
+                refCerti.current.scrollIntoView({ behavior: "smooth" });
               }}
               type="button"
-              className={activeBtn === "certified" ? style.location_content_btn_active : style.location_content_btn}
+              className={
+                activeBtn === "certified"
+                  ? style.location_content_btn_active
+                  : style.location_content_btn
+              }
             >
               Carsome Certified
             </button>
             <button
               onClick={() => {
-                setActiveBtn("store")
-                refStore.current.scrollIntoView({behavior: "smooth"});
+                setActiveBtn("store");
+                refStore.current.scrollIntoView({ behavior: "smooth" });
               }}
               type="button"
-              className={activeBtn === "store" ? style.location_content_btn_active : style.location_content_btn}
+              className={
+                activeBtn === "store"
+                  ? style.location_content_btn_active
+                  : style.location_content_btn
+              }
             >
               Store
             </button>
           </div>
-          <div className={style.location_content_body}>
+          <div className={style.location_content_body} ref={refContainer}>
             <div ref={refModel} className={style.location_content_body_model}>
               <div className={style.model_header}>Brand & Model</div>
               <div className={style.model_sub_content}>
@@ -737,7 +785,9 @@ function ModalFilter(props) {
 
         <div className={style.modal_content_buttom}>
           <button className={style.modal_content_clear_button}>Reset</button>
-          <button className={style.modal_content_apply_button}>Apply (2 Cars)</button>
+          <button className={style.modal_content_apply_button}>
+            Apply (2 Cars)
+          </button>
         </div>
       </div>
     </div>
