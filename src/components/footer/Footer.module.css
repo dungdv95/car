@@ -66,7 +66,6 @@
     font-size: 100%;
     vertical-align: baseline;
     color: #696c71;
-    border-top: 1px solid #3c4251;
     width: 190px;
 }
 .footer_content_header_left {
@@ -654,4 +653,8 @@ footer_click_link_icon::after {
     margin-right: 24px;
     margin-bottom: 20px;
     background: #272d3c url("../../img/appstore.png") no-repeat center center;
+}
+.select_coutry_custom {
+    padding: unset;
+    margin: unset!important;
 }

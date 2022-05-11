@@ -1,21 +1,13 @@
 import { useState } from "react";
 import style from "./Footer.module.css";
 import {
-  IonContent,
-  IonAccordionGroup,
-  IonAccordion,
   IonItem,
-  IonLabel,
   IonList,
-  IonPage,
   IonSelect,
   IonSelectOption,
   IonImg,
   IonAvatar,
-  IonButton,
-  IonPopover
 } from "@ionic/react";
-import { arrowDownCircle } from "ionicons/icons";
 import DropdownFooter from "./DropdownFooter";
 import malaysia from "../../img/flags/malaysia.png";
 import indonesia from "../../img/flags/indonesia.png";
@@ -251,11 +243,11 @@ function Footer() {
           <IonContent>Popover Content</IonContent>
         </IonPopover> */}
 
-          <IonList>
+          <IonList inset={true} className={style.select_coutry_custom}>
             <IonItem>
               <IonSelect value="malaysia" interface="popover">
                 <IonSelectOption value="malaysia">
-                  {/* <img src={malaysia} /> */}
+                  <img src={malaysia} />
                   <IonAvatar>
                     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
                   </IonAvatar>
