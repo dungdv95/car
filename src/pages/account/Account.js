@@ -20,7 +20,7 @@ import {
   ticketOutline,
   alertCircleOutline,
   callOutline,
-  settingsOutline
+  settingsOutline,
 } from "ionicons/icons";
 
 const Account = () => {
@@ -28,9 +28,9 @@ const Account = () => {
     <IonPage>
       <IonHeader className={style.header_info}>
         {/* <div className={style.header_image}> */}
-          <IonAvatar className={style.avatar_custom}>
-            <IonImg src={avatar} />
-          </IonAvatar>
+        <IonAvatar className={style.avatar_custom}>
+          <IonImg src={avatar} />
+        </IonAvatar>
         {/* </div> */}
       </IonHeader>
       <h3 className={style.name_user}>
@@ -157,10 +157,7 @@ const Account = () => {
                 {/* tree item */}
                 <div className={style.make_model_tree_item}>
                   <div className={style.make_model_tree_item_header}>
-                    <IonIcon
-                      className={style.icon_custom}
-                      icon={callOutline}
-                    />
+                    <IonIcon className={style.icon_custom} icon={callOutline} />
                     <div className={style.make_model_tree_item_title}>
                       <span>Contact Us</span>
                     </div>
@@ -171,11 +168,12 @@ const Account = () => {
                   </div>
                 </div>
                 {/* tree item */}
-                <div
-                  className={style.make_model_tree_item}
-                >
+                <div className={style.make_model_tree_item}>
                   <div className={style.make_model_tree_item_header}>
-                    <IonIcon className={style.icon_custom} icon={settingsOutline} />
+                    <IonIcon
+                      className={style.icon_custom}
+                      icon={settingsOutline}
+                    />
                     <div className={style.make_model_tree_item_title}>
                       <span>Settings</span>
                     </div>
